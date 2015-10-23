@@ -1,0 +1,181 @@
+#!/bin/bash
+
+usage="usage:  $(basename "$0") [name]
+
+Script to generate an Ansible project scaffold
+
+where:
+    name  --  the name of the project directory to create"
+
+PROJ_NAME=$1
+ROOT_PATH="$PWD/$PROJ_NAME"
+
+FILES=()
+
+read -r -d '' TEMP <<EOF
+inventory/hosts:localhost
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+inventory/group_vars/all:
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+inventory/host_vars/localhost:ansible_python_interpreter: /usr/bin/env python
+ansible_connection: local
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+site.yml:---
+# file: site.yml
+- include: infra.yml
+- include: provision.yml
+- include: deploy.yml
+- include: test.yml
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+infra.yml:# Use this playbook to actually create or modify the shape and type of the machines the rest of the ansible project requires.
+- hosts: localhost
+  gather_facts: yes
+  tasks:
+  - name: not really setting up servers here
+    debug: msg="This is purely for posterity and flair."
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+provision.yml:# Use this playbook to outfit your servers/machines with the roles they need to perform.
+- hosts: all
+  gather_facts: yes
+  roles:
+    - example
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+deploy.yml:# Use this playbook to deploy build artifacts to the set of servers.
+- hosts: all
+  gather_facts: yes
+  tasks:
+  - name: not actually deploying things here.
+    debug: msg="You'd want to execute the set of deploy tasks or include them from someplace."
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+test.yml:# Use this playbook to bootstrap tests to run from plays in the tests directory.
+- hosts: all
+  gather_facts: yes
+  tasks:
+    - include: tests/main.yml
+EOF
+FILES+=("$TEMP")
+
+read -r -d '' TEMP <<EOF
+tests/main.yml:- name: the final exam you're totally unprepared for
+  fail: msg="If you so much as... I swear I will fail this test... Don't make me do it!"
+EOF
+FILES+=("$TEMP")
+
+
+read -r -d '' TEMP <<EOF
+README.md:**my_organization/$PROJ_NAME**
+
+---
+#Overview
+
+This is an empty Ansible project scaffolded just for you, so you can get to work automating all the things!
+
+**Prerequisites:**
+* [ansible](#ansible)
+
+If you have all these already, just skip to the [Usage](#usage) section.
+
+###ansible
+
+**Install python-pip:**
+
+    \$ sudo easy_install pip
+
+**Setup virtualenvwrapper:**
+
+    \$ sudo pip install virtualenvwrapper
+
+**Add these lines to your ~/.profile file:**
+
+    export WORKON_HOME=\$HOME/.virtualenvs
+    export PROJECT_HOME=\$HOME/Repositories
+    source /usr/local/bin/virtualenvwrapper.sh
+
+The above assumes that your projects live in your home folder in a directory named \`Repositories\`
+
+**Reload your shell or source the above file to load the changes:**
+
+        $ source ~/.profile
+
+**Create an environment for doing your ansible development:**
+
+        $ mkvirtualenv ansible-dev
+
+**Make sure your new environment is loaded:**
+
+        $ workon
+        ansible-dev
+
+**Install ansible:**
+
+        $ sudo pip install ansible
+
+---
+
+#Usage
+
+##Running the playbook
+
+	$ cd ~/Repositories/$PROJ_NAME
+	$ ansible-playbook -i inventory/hosts site.yml
+	
+##Testing
+
+The \`test.yml\` playbook should contain test scenarios and/or include external tasks for testing which in this example are contained in \`tests/main.yml\`
+
+These are intended to be akin to unit tests for this playbook project:
+
+        $ cd ~/Repositories/$PROJ_NAME
+	$ ansible-playbook -i inventory/hosts test.yml
+EOF
+FILES+=("$TEMP")
+
+function gen_project {
+    mkdir -p $ROOT_PATH
+    
+    for i in "${FILES[@]}"
+    do
+	KEY=${i%%:*}
+	VALUE=${i#*:}
+	
+	DIR="$(dirname "$KEY")"
+	FILE="$(basename "$KEY")"
+
+	mkdir -p "$ROOT_PATH/$DIR"
+
+	if [ ! -e "$ROOT_PATH/$DIR/$FILE" ]
+	then
+	    echo "$VALUE" > "$ROOT_PATH/$DIR/$FILE"
+	fi
+    done
+}
+
+if [ ! -z "$PROJ_NAME" ]
+then
+    gen_project
+    exit 0
+else
+    echo "$usage" >&2
+    exit 1
+fi
