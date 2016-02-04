@@ -46,6 +46,7 @@
 
 ;; bindings for installed packages
 (global-set-key (kbd "s-\\") 'company-complete)
+(global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-Z") 'redo)
 (global-set-key (kbd "s-O") 'neotree-toggle)
 (global-set-key (kbd "s-P") 'helm-M-x)

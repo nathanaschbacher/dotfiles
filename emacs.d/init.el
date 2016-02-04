@@ -9,13 +9,14 @@
 
 (defvar my-packages
   '(
-    erlang elixir-mode alchemist scala-mode2 rust-mode go-mode
-    markdown-mode yaml-mode toml-mode
-    projectile go-projectile sbt-mode mvn ansible
-    company flycheck flycheck-rust flyspell-lazy
-    smooth-scrolling redo+ expand-region highlight hlinum git-gutter-fringe
+    exec-path-from-shell
+    erlang elixir-mode alchemist lfe-mode scala-mode2 rust-mode go-mode ponylang-mode
+    markdown-mode yaml-mode toml-mode json-mode
+    projectile sbt-mode mvn ansible
+    company flycheck flycheck-rust flycheck-dialyzer flyspell-lazy
+    smooth-scrolling expand-region highlight hlinum git-gutter-fringe
     helm helm-themes helm-flycheck
-    neotree nyan-mode
+    f workgroups2 org undo-tree magit magit neotree nyan-mode
     flatland-theme flatland-black-theme monokai-theme
    )
 )
@@ -37,6 +38,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+
 (setq default-directory "~/Repositories")
 
 (add-hook 'after-init-hook 'global-company-mode)
@@ -53,8 +57,9 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(require 'redo+)
-;(global-set-key (kbd "s-Z") 'redo)
+(require 'undo-tree)
+(defalias 'redo 'undo-tree-redo)
+(global-undo-tree-mode 1)
 
 (require 'paren)
 (setq show-paren-style 'parenthesis)
@@ -74,20 +79,6 @@
 (set-face-foreground 'git-gutter-fr:modified "gold1")
 (set-face-foreground 'git-gutter-fr:added    "YellowGreen")
 (set-face-foreground 'git-gutter-fr:deleted  "tomato3")
-
-;; My Custom window and buffer management.
-;(global-set-key [wheel-right] 'ignore)
-;(global-set-key [wheel-left] 'ignore)
-;(global-set-key (kbd "s-[") 'previous-buffer)
-;(global-set-key (kbd "s-]") 'next-buffer)
-;(global-set-key (kbd "s-.") 'keyboard-escape-quit)
-;(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
-;(global-set-key (kbd "s-<down>") 'shrink-window)
-;(global-set-key (kbd "s-<up>") 'enlarge-window)
-;(global-set-key (kbd "s-<left>") 'shrink-window-horizontally)
-;(global-set-key (kbd "s-<right>") 'enlarge-window-horizontally)
-;(global-set-key (kbd "s--") 'text-scale-decrease)
-;(global-set-key (kbd "s-=") 'text-scale-increase)
 		
 (defun p-window () 
     (interactive)
@@ -95,32 +86,18 @@
 (defun n-window () 
     (interactive)
     (other-window 1))
-;(global-set-key (kbd "s-{") 'p-window)
-;(global-set-key (kbd "s-}") 'n-window)
 
 (defun split-n-switch (direction) 
     (select-window
       (pcase direction
         (0 (split-window-right))
         (1 (split-window-below)))))
-;(global-set-key (kbd "s-t") (lambda () (interactive) (split-n-switch 0)))
-;(global-set-key (kbd "s-T") (lambda () (interactive) (split-n-switch 1)))
-;(global-set-key (kbd "s-N") 'make-frame)
-;(global-set-key (kbd "s-n") 'find-file)
-;(global-set-key (kbd "s-o") 'find-file)
-
-;; (defun new-empty-buffer ()
-;;   (interactive)
-;;   (switch-to-buffer (generate-new-buffer "Untitled.txt")))
-;; (global-set-key (kbd "s-n") 'new-empty-buffer)
 
 (defun spiral-close ()
   (interactive)
   (if (> (length (window-list)) 1) 
       (delete-window)
     (kill-buffer (current-buffer))))
-;(global-set-key (kbd "s-W") 'spiral-close)
-;(global-set-key (kbd "C-s-w") 'kill-this-buffer)
 		
 ;; Mouse and scrolling behavior.
 (require 'smooth-scrolling)
@@ -310,7 +287,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 110 :width normal))))
+ '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 120 :width normal))))
  '(mode-line-highlight ((t (:background "Orange" :foreground "white" :box (:line-width 4 :color "Orange"))))))
 
 (load-file "~/.emacs.d/my_bindings.el")
