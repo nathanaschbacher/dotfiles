@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# ansible-init - a shell script for scaffolding an ansible project
+# Copyright 2015 Nathan Aschbacher
+# MIT License
+
 usage="usage:  $(basename "$0") [name]
 
 Script to generate an Ansible project scaffold

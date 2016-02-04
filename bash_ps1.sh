@@ -22,17 +22,30 @@ get_my_prompt()
     local ADDED=0
     local DELETED=0
     local UNTRACKED=0
-    local BRANCH=""
+    local BRANCH="undefined"
 
     local OUTPUT_STR=""
+
+    IFS=$'\n'
     
     if result=$(git status -b --porcelain 2>&1); then
-	IFS=$'\n' read -rd '' -a lines <<<"$result"
+	IFS=$'\n' read -rd '' -a files <<<"$result"
 
-	BRANCH="${lines[0]##* }"
-
-	for line in "${lines[@]:1}"; do
-	    first_char=${line:0:1}
+	if result=$(git branch 2>&1); then
+	    IFS=$'\n' read -rd '' -a branches <<<"$result"
+	    
+	    for branch in "${branches[@]}"; do
+		first_char=${branch:0:1}
+		case "$first_char" in
+		    "*")
+			BRANCH=${branch#\*\ }
+			break ;;
+		esac
+	    done
+	fi
+	
+	for file in "${files[@]:1}"; do
+	    first_char=${file:0:1}
 	    case "$first_char" in
 		A)
 		    ((ADDED++)) ;;
@@ -49,7 +62,7 @@ get_my_prompt()
 	    esac
 	done
 	
-	OUTPUT_STR="${WHITE}${PWD##*/},{${BLUE}${BRANCH}${WHITE},${GREEN}${ADDED}${WHITE},${YELLOW}${MODIFIED}${WHITE},${RED}${DELETED}${WHITE},${PURPLE}${UNTRACKED}${WHITE}}"
+	OUTPUT_STR="${WHITE}${PWD##*/},{${CYAN}${BRANCH}${WHITE},${GREEN}${ADDED}${WHITE},${YELLOW}${MODIFIED}${WHITE},${RED}${DELETED}${WHITE},${PURPLE}${UNTRACKED}${WHITE}}"
     else
 	OUTPUT_STR="${WHITE}${PWD##*/}"
     fi
