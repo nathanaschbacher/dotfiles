@@ -1,7 +1,7 @@
 ;; imported from the emacsformacosx defaults because I like them.
 ;; Here are some Nextstep-like bindings for command key sequences.
 (define-key global-map [?\s-,] 'customize)
-(define-key global-map [?\s-'] 'next-multiframe-window)
+;(define-key global-map [?\s-'] 'next-multiframe-window)
 ;(define-key global-map [?\s-`] 'other-frame)
 ;(define-key global-map [?\s-~] 'ns-prev-frame)
 (define-key global-map [?\s--] 'center-line)
@@ -26,7 +26,7 @@
 ;(define-key global-map [?\s-h] 'ns-do-hide-emacs)
 ;(define-key global-map [?\s-H] 'ns-do-hide-others)
 (define-key global-map [?\s-j] 'exchange-point-and-mark)
-(define-key global-map [?\s-k] 'kill-this-buffer)
+;(define-key global-map [?\s-k] 'kill-this-buffer)
 (define-key global-map [?\s-l] 'goto-line)
 (define-key global-map [?\s-m] 'iconify-frame)
 ;(define-key global-map [?\s-n] 'make-frame)
@@ -48,8 +48,11 @@
 (global-set-key (kbd "s-\\") 'company-complete)
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-Z") 'redo)
-(global-set-key (kbd "s-O") 'neotree-toggle)
-(global-set-key (kbd "s-P") 'helm-M-x)
+;(global-set-key (kbd "s-O") 'neotree-toggle)
+(global-set-key (kbd "s-o") 'helm-find-files);(lambda (args) (interactive "P") (toggle-helm 'helm-find-files args)))
+(global-set-key (kbd "s-;") 'helm-buffers-list);(lambda (args) (interactive "P") (toggle-helm 'helm-buffers-list args)))
+(global-set-key (kbd "s-S-SPC") 'helm-M-x);(lambda (args) (interactive) (toggle-helm 'helm-M-x args)))
+(global-set-key (kbd "s-P") 'helm-M-x);(lambda (args) (interactive) (toggle-helm 'helm-M-x args)))
 
 ;; my custom window and buffer management.
 (global-set-key [wheel-right] 'ignore)
@@ -72,7 +75,14 @@
 (global-set-key (kbd "s-T") (lambda () (interactive) (split-n-switch 1)))
 (global-set-key (kbd "s-N") 'make-frame)
 (global-set-key (kbd "s-n") 'find-file)
-(global-set-key (kbd "s-o") 'find-file)
+(global-set-key (kbd "s-O") 'find-file)
 
-(global-set-key (kbd "s-w") 'spiral-close)
-(global-set-key (kbd "M-s-w") 'kill-this-buffer)
+(global-set-key (kbd "s-M-W") 'spiral-close)
+(global-set-key (kbd "s-M-w") 'spiral-kill)
+(global-set-key (kbd "s-W") 'delete-window-then-frame)
+(global-set-key (kbd "s-w") 'kill-this-buffer)
+
+(define-key emacs-lisp-mode-map (kbd "s-e") 'eval-defun)
+(define-key emacs-lisp-mode-map (kbd "s-E") 'eval-region)
+(define-key emacs-lisp-mode-map (kbd "s-M-E") 'eval-buffer)
+

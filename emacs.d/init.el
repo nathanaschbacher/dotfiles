@@ -1,10 +1,11 @@
+(load-file "~/.emacs.d/visa_proxy.el")
+
 (require 'cl)
 
 ;; Setup package repositories and install my defaualt packages.
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
 (defvar my-packages
@@ -16,7 +17,7 @@
     company flycheck flycheck-rust flycheck-dialyzer flyspell-lazy
     smooth-scrolling expand-region highlight hlinum git-gutter-fringe
     helm helm-themes helm-flycheck
-    f workgroups2 org undo-tree magit magit neotree nyan-mode
+    org undo-tree magit nyan-mode
     flatland-theme flatland-black-theme monokai-theme
    )
 )
@@ -93,12 +94,27 @@
         (0 (split-window-right))
         (1 (split-window-below)))))
 
+(defun delete-window-then-frame ()
+  (interactive)
+  (if (> (length (window-list)) 1)
+      (delete-window)
+    (delete-frame)))
+
 (defun spiral-close ()
   (interactive)
   (if (> (length (window-list)) 1) 
-      (delete-window)
+      (delete-window-then-frame)
     (kill-buffer (current-buffer))))
-		
+
+(defun spiral-kill ()
+  (interactive)
+  (if (> (length (window-list)) 1) 
+      (kill-buffer (current-buffer))
+    (delete-window-then-frame)))
+
+(defun toggle-helm (helm-command-to-call other-args)
+  (funcall helm-command-to-call other-args))
+
 ;; Mouse and scrolling behavior.
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 4)
@@ -111,25 +127,25 @@
 (setq scroll-error-top-bottom 't)
 (setq scroll-preserve-screen-position 't)
 
-(require 'neotree)
-;(global-set-key (kbd "s-O") 'neotree-toggle)
-
 (require 'helm)
 (require 'helm-config)
-;(global-set-key (kbd "s-P") 'helm-M-x)
 (helm-autoresize-mode 1)
 
-(nyan-mode 1)
 (setq nyan-wavy-trail t)
+(setq nyan-minimum-window-width 80)
+(setq nyan-bar-length 15)
+(nyan-mode)
+
+(global-flycheck-mode)
 
 ;;Mode line setup
 (setq-default
  mode-line-format
  '(; Position, including warning for 80 columns
-   (:propertize "%4l" face mode-line-position-face)
+   (:propertize " %4l" face mode-line-position-face)
    ":"
    (:eval (propertize "%3c" 'face
-                      (if (>= (current-column) 80)
+                      (if (>= (current-column) 110)
                           'mode-line-80col-face
                         'mode-line-position-face)))
    " "
