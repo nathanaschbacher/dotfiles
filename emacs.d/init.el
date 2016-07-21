@@ -1,5 +1,3 @@
-(load-file "~/.emacs.d/visa_proxy.el")
-
 (require 'cl)
 
 ;; Setup package repositories and install my defaualt packages.
@@ -163,12 +161,20 @@
           (t "  ")))
    " "
    ; directory and buffer/file name
-   (:propertize (:eval (shorten-directory default-directory 30))
-                face mode-line-folder-face)
-   (:propertize "%b"
-                face mode-line-filename-face)
+   (:eval  (propertize
+            (concat
+             (propertize (file-parents-abbrv 3)
+                         'face 'mode-line-folder-face)
+             (propertize "%b"
+                         'face 'mode-line-filename-face))
+            'mouse-face 'mode-line-highlight
+            'help-echo "Click: Show file buffers\n\ Right-click: Show all buffers"
+            'local-map (let ((map (make-sparse-keymap)))
+                   (define-key map [mode-line down-mouse-1] 'helm-buffers-list)
+                   (define-key map [mode-line down-mouse-3] 'describe-mode)
+                   map)))
    ; narrow [default -- keep?]
-   " %n "
+   " %n"
    ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
    " %["
    ; (:propertize mode-name
@@ -197,6 +203,18 @@
    (global-mode-string global-mode-string)
    " "
    ))
+
+(defun file-parents-abbrv (depth)
+  (setq fullpath buffer-file-name)
+  (if fullpath
+      (progn
+        (setq pathlist (last (split-string (file-name-directory fullpath) "/" t) depth))
+        (setq pathstring (abbreviate-file-name (mapconcat 'identity pathlist "/")))
+        (unless (or
+             (< (length pathlist) depth)
+             (string-prefix-p "~/" pathstring))
+          (concat ".../" pathstring "/")))
+    ""))
 
 ;; Helper function
 (defun shorten-directory (dir max-length)
