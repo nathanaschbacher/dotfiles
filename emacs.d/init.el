@@ -9,12 +9,12 @@
 (defvar my-packages
   '(
     exec-path-from-shell
-    erlang elixir-mode alchemist lfe-mode scala-mode2 rust-mode go-mode ponylang-mode
+    erlang elixir-mode alchemist lfe-mode rust-mode go-mode ponylang-mode
     markdown-mode yaml-mode toml-mode json-mode
-    projectile sbt-mode mvn ansible
+    projectile ansible
     company flycheck flycheck-rust flycheck-dialyzer flyspell-lazy
     smooth-scrolling expand-region highlight hlinum git-gutter-fringe
-    helm helm-themes helm-flycheck
+    helm helm-themes helm-projectile helm-flycheck
     org undo-tree magit nyan-mode
     flatland-theme flatland-black-theme monokai-theme
    )
