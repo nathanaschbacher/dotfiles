@@ -128,12 +128,11 @@ The above assumes that your projects live in your home folder in a directory nam
 
 **Make sure your new environment is loaded:**
 
-        $ workon
-        ansible-dev
+        $ workon ansible-dev
 
 **Install ansible:**
 
-        $ sudo pip install ansible
+        $ pip install ansible
 
 ---
 
