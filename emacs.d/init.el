@@ -9,14 +9,16 @@
 (defvar my-packages
   '(
     exec-path-from-shell
-    erlang elixir-mode alchemist lfe-mode rust-mode go-mode ponylang-mode
+    erlang elixir-mode alchemist lfe-mode rust-mode go-mode ansible cargo
     markdown-mode yaml-mode toml-mode json-mode
-    projectile ansible
-    company flycheck flycheck-rust flycheck-dialyzer flyspell-lazy
+    company company-erlang company-go company-ansible
+    flycheck flycheck-rust flycheck-rebar3 flycheck-mix flycheck-elixir flycheck-dialyzer
+    flyspell-lazy rustfmt
     smooth-scrolling expand-region highlight hlinum git-gutter-fringe
     helm helm-themes helm-projectile helm-flycheck
-    org undo-tree magit nyan-mode
+    projectile org undo-tree magit
     flatland-theme flatland-black-theme monokai-theme
+    nyan-mode
    )
 )
 
@@ -321,7 +323,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 120 :width normal))))
+ '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 110 :width normal))))
  '(mode-line-highlight ((t (:background "Orange" :foreground "white" :box (:line-width 4 :color "Orange"))))))
 
 (load-file "~/.emacs.d/my_bindings.el")
