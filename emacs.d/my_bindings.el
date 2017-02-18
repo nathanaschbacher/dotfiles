@@ -1,5 +1,11 @@
 ;; imported from the emacsformacosx defaults because I like them.
-;; Here are some Nextstep-like bindings for command key sequences.
+
+;; This will make meta and super be in the same physical key location
+;; as when on a Mac so that I don't get tripped up between computers.
+(when (string-equal system-type "gnu-linux")
+  (setq x-super-keysym 'meta)
+  (setq x-meta-keysym 'super))
+
 (define-key global-map [?\s-,] 'customize)
 ;(define-key global-map [?\s-'] 'next-multiframe-window)
 ;(define-key global-map [?\s-`] 'other-frame)
