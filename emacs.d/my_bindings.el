@@ -48,11 +48,31 @@
 (global-set-key (kbd "s-\\") 'company-complete)
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-Z") 'redo)
-;(global-set-key (kbd "s-O") 'neotree-toggle)
-(global-set-key (kbd "s-o") 'helm-find-files);(lambda (args) (interactive "P") (toggle-helm 'helm-find-files args)))
-(global-set-key (kbd "s-;") 'helm-buffers-list);(lambda (args) (interactive "P") (toggle-helm 'helm-buffers-list args)))
+
+(defun my:find-files ()
+  (interactive)
+  (call-interactively
+   (if (projectile-project-p) 'helm-projectile-find-file 'helm-find-files)))
+
+(defun my:recentf ()
+  (interactive)
+  (call-interactively
+   (if (projectile-project-p) 'helm-projectile-recentf 'helm-recentf)))
+
+(defun my:list-buffers ()
+  (interactive)
+  (call-interactively
+   (if (projectile-project-p) 'helm-projectile-switch-to-buffer 'helm-buffers-list)))
+
+(global-set-key (kbd "M-s-s") 'projectile-save-project-buffers)
+(global-set-key (kbd "s-F") 'helm-projectile-grep);(lambda (args) (interactive "P") (toggle-helm 'helm-find-files args)))
+(global-set-key (kbd "s-o") 'my:find-files);(lambda (args) (interactive "P") (toggle-helm 'helm-find-files args)))
+(global-set-key (kbd "M-s-o") 'helm-find-files)
+(global-set-key (kbd "s-O") 'my:recentf)
+(global-set-key (kbd "s-P") 'helm-projectile)
+(global-set-key (kbd "s-;") 'my:list-buffers);(lambda (args) (interactive "P") (toggle-helm 'helm-buffers-list args)))
+(global-set-key (kbd "M-s-;") 'helm-buffers-list)
 (global-set-key (kbd "s-S-SPC") 'helm-M-x);(lambda (args) (interactive) (toggle-helm 'helm-M-x args)))
-(global-set-key (kbd "s-P") 'helm-M-x);(lambda (args) (interactive) (toggle-helm 'helm-M-x args)))
 
 ;; my custom window and buffer management.
 (global-set-key [wheel-right] 'ignore)
@@ -75,14 +95,8 @@
 (global-set-key (kbd "s-T") (lambda () (interactive) (split-n-switch 1)))
 (global-set-key (kbd "s-N") 'make-frame)
 (global-set-key (kbd "s-n") 'find-file)
-(global-set-key (kbd "s-O") 'find-file)
 
 (global-set-key (kbd "s-M-W") 'spiral-close)
 (global-set-key (kbd "s-M-w") 'spiral-kill)
 (global-set-key (kbd "s-W") 'delete-window-then-frame)
 (global-set-key (kbd "s-w") 'kill-this-buffer)
-
-(define-key emacs-lisp-mode-map (kbd "s-e") 'eval-defun)
-(define-key emacs-lisp-mode-map (kbd "s-E") 'eval-region)
-(define-key emacs-lisp-mode-map (kbd "s-M-E") 'eval-buffer)
-

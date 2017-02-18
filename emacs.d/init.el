@@ -16,7 +16,8 @@
     flyspell-lazy rustfmt
     smooth-scrolling expand-region highlight hlinum git-gutter-fringe
     helm helm-themes helm-projectile helm-flycheck
-    projectile org undo-tree magit
+    projectile perspective persp-mode persp-projectile
+    org undo-tree magit
     flatland-theme flatland-black-theme monokai-theme
     nyan-mode
    )
@@ -112,9 +113,6 @@
       (kill-buffer (current-buffer))
     (delete-window-then-frame)))
 
-(defun toggle-helm (helm-command-to-call other-args)
-  (funcall helm-command-to-call other-args))
-
 ;; Mouse and scrolling behavior.
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 4)
@@ -130,6 +128,12 @@
 (require 'helm)
 (require 'helm-config)
 (helm-autoresize-mode 1)
+
+(require 'helm-projectile)
+(helm-projectile-on)
+
+(defun toggle-helm (helm-command-to-call other-args)
+  (funcall helm-command-to-call other-args))
 
 (setq nyan-wavy-trail t)
 (setq nyan-minimum-window-width 80)
@@ -251,14 +255,6 @@
     :foreground "gray60" :background "gray20"
     :inverse-video nil
     :box '(:line-width 3 :color "gray20" :style nil))
-;; (set-face-attribute 'mode-line nil
-;;     :foreground "gray60" :background "gray20"
-;;     :inverse-video nil
-;;     :box '(:line-width 6 :color "gray20" :style nil))
-;; (set-face-attribute 'mode-line-inactive nil
-;;     :foreground "gray80" :background "gray40"
-;;     :inverse-video nil
-;;     :box '(:line-width 6 :color "gray40" :style nil))
 (set-face-attribute 'mode-line-read-only-face nil
     :inherit 'mode-line-face
     :foreground "#4271ae"
@@ -282,17 +278,10 @@
 (set-face-attribute 'mode-line-mode-face nil
     :inherit 'mode-line-face
     :foreground "gray40")
-;; (set-face-attribute 'mode-line-mode-face nil
-;;     :inherit 'mode-line-face
-;;     :foreground "gray80")
 (set-face-attribute 'mode-line-minor-mode-face nil
     :inherit 'mode-line-mode-face
     :foreground "gray60"
-    :height 110)
-;; (set-face-attribute 'mode-line-minor-mode-face nil
-;;     :inherit 'mode-line-mode-face
-;;     :foreground "gray40"
-;;     :height 110)
+    :height 120)
 (set-face-attribute 'mode-line-process-face nil
     :inherit 'mode-line-face
     :foreground "#718c00")
@@ -314,8 +303,7 @@
      ("CMU Typewriter Text" "fixed")
      ("Sans Serif" "helv" "helvetica" "arial" "fixed")
      ("helv" "helvetica" "arial" "fixed"))))
- '(font-use-system-font t)
- '(initial-scratch-message t)
+ '(initial-scratch-message nil)
  '(recentf-mode t)
  '(scroll-bar-mode nil))
 (custom-set-faces
@@ -323,7 +311,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 110 :width normal))))
+ '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 120 :width normal))))
  '(mode-line-highlight ((t (:background "Orange" :foreground "white" :box (:line-width 4 :color "Orange"))))))
 
 (load-file "~/.emacs.d/my_bindings.el")
