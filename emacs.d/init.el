@@ -283,7 +283,7 @@
 (set-face-attribute 'mode-line-minor-mode-face nil
     :inherit 'mode-line-mode-face
     :foreground "gray60"
-    :height 120)
+    :height 100)
 (set-face-attribute 'mode-line-process-face nil
     :inherit 'mode-line-face
     :foreground "#718c00")
@@ -313,7 +313,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 120 :width normal))))
+ '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 100 :width normal))))
  '(mode-line-highlight ((t (:background "Orange" :foreground "white" :box (:line-width 4 :color "Orange"))))))
 
 (load-file "~/.emacs.d/my_bindings.el")
