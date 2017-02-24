@@ -1,0 +1,213 @@
+[$Version]
+update_info=fonts_global.upd:Fonts_Global
+
+[ColorEffects:Disabled]
+Color=
+ColorAmount=
+ColorEffect=
+ContrastAmount=
+ContrastEffect=
+IntensityAmount=
+IntensityEffect=
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=
+ColorAmount=
+ColorEffect=
+ContrastAmount=
+ContrastEffect=
+Enable=false
+IntensityAmount=
+IntensityEffect=
+
+[Colors:Button]
+BackgroundAlternate=189,195,199
+BackgroundNormal=239,240,241
+DecorationFocus=61,174,233
+DecorationHover=147,206,233
+ForegroundActive=61,174,233
+ForegroundInactive=127,140,141
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=49,54,59
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:Complementary]
+BackgroundAlternate=59,64,69
+BackgroundNormal=49,54,59
+DecorationFocus=30,146,255
+DecorationHover=61,174,230
+ForegroundActive=246,116,0
+ForegroundInactive=175,176,179
+ForegroundLink=61,174,230
+ForegroundNegative=237,21,21
+ForegroundNeutral=201,206,59
+ForegroundNormal=239,240,241
+ForegroundPositive=17,209,22
+ForegroundVisited=61,174,230
+
+[Colors:Selection]
+BackgroundAlternate=29,153,243
+BackgroundNormal=61,174,233
+DecorationFocus=61,174,233
+DecorationHover=147,206,233
+ForegroundActive=252,252,252
+ForegroundInactive=239,240,241
+ForegroundLink=253,188,75
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=239,240,241
+ForegroundPositive=39,174,96
+ForegroundVisited=189,195,199
+
+[Colors:Tooltip]
+BackgroundAlternate=77,77,77
+BackgroundNormal=49,54,59
+DecorationFocus=61,174,233
+DecorationHover=147,206,233
+ForegroundActive=61,174,233
+ForegroundInactive=189,195,199
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=239,240,241
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:View]
+BackgroundAlternate=239,240,241
+BackgroundNormal=252,252,252
+DecorationFocus=61,174,233
+DecorationHover=147,206,233
+ForegroundActive=61,174,233
+ForegroundInactive=127,140,141
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=49,54,59
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:Window]
+BackgroundAlternate=189,195,199
+BackgroundNormal=239,240,241
+DecorationFocus=61,174,233
+DecorationHover=147,206,233
+ForegroundActive=61,174,233
+ForegroundInactive=127,140,141
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=49,54,59
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[General]
+ColorScheme=Breeze
+Name=Breeze
+XftAntialias=true
+XftHintStyle=hintnone
+dbfile=/home/nathan/.mozilla/firefox/ti7eg0f4.default/places.sqlite
+fixed=Menlo,9,-1,5,50,0,0,0,0,0
+font=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+menuFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=.San Francisco Display,8,-1,5,50,0,0,0,0,0
+toolBarFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0
+widgetStyle=Breeze
+
+[Icons]
+Theme=breeze
+
+[KDE]
+ColorScheme=Breeze
+DoubleClickInterval=400
+LookAndFeelPackage=org.kde.breeze.desktop
+SingleClick=false
+StartDragDist=4
+StartDragTime=500
+WheelScrollLines=3
+contrast=4
+widgetStyle=breeze
+
+[KFileDialog Settings]
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=0
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Previews=true
+Show Bookmarks=false
+Show Full Path=false
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=133
+View Style=Simple
+listViewIconSize=100
+
+[KScreen]
+ScaleFactor=1
+ScreenScaleFactors=eDP-1=1;DP-1=1;HDMI-1=1;DP-2=1;HDMI-2=1;
+
+[KShortcutsDialog Settings]
+Dialog Size=1136,812
+
+[Shortcuts]
+Activate Next Tab=Alt+};\s
+Activate Previous Tab=Alt+{;\s
+ActualSize=Alt+_
+AddBookmark=Alt+D
+Back=Back
+BackwardWord=Meta+Left
+Begin=Home
+BeginningOfLine=Alt+Left; Alt+Home
+Close=Alt+W;\s
+Copy=Alt+C;\s
+Cut=Alt+X;\s
+DeleteWordBack=Meta+Backspace
+DeleteWordForward=Meta+Del
+Deselect=Alt+Shift+A
+DocumentBack=Alt+[
+DocumentForward=Alt+]
+End=End
+EndOfLine=Alt+Right; Alt+End
+Find=Alt+F
+FindNext=Alt+G
+FindPrev=Alt+Shift+G
+Forward=Forward
+ForwardWord=Meta+Right
+FullScreen=Ctrl+Alt+F
+Home=Home Page
+MoveToTrash=Alt+Backspace
+New=Alt+N
+Open=Alt+O
+Paste=Alt+V;\s
+Paste Selection=Alt+Ins
+Print=Alt+P
+Quit=Alt+Q
+Redo=Alt+Shift+Z
+Reload=Alt+R; Refresh
+Replace=Alt+Shift+H
+Save=Alt+S
+SaveAs=Alt+Shift+S
+SelectAll=Alt+A
+Spelling=Alt+:
+Undo=Alt+Z
+ZoomIn=Alt+=
+ZoomOut=Alt+-
+
+[WM]
+activeBackground=71,80,87
+activeBlend=255,255,255
+activeFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+activeForeground=239,240,241
+inactiveBackground=239,240,241
+inactiveBlend=75,71,67
+inactiveForeground=189,195,199
