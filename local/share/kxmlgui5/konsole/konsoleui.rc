@@ -50,18 +50,18 @@
   </Menu>
  </MenuBar>
  <ActionProperties scheme="Default">
-  <Action name="clone-tab" shortcut="Alt+T"/>
+  <Action name="clone-tab" shortcut="Meta+T"/>
   <Action name="help_contents" shortcut=""/>
-  <Action name="close-window" shortcut="Alt+Q"/>
+  <Action name="close-window" shortcut="Meta+Q"/>
   <Action name="fullscreen" shortcut=""/>
   <Action name="new-tab" shortcut="Meta+Alt+T"/>
-  <Action name="new-window" shortcut="Alt+N"/>
-  <Action name="next-view" shortcut="Alt+}"/>
-  <Action name="previous-view" shortcut="Alt+{"/>
-  <Action name="close-active-view" shortcut="Alt+Shift+W"/>
+  <Action name="new-window" shortcut="Meta+N"/>
+  <Action name="next-view" shortcut="Meta+}"/>
+  <Action name="previous-view" shortcut="Meta+{"/>
+  <Action name="close-active-view" shortcut="Meta+Shift+W"/>
   <Action name="close-other-views" shortcut="Meta+Alt+W"/>
   <Action name="next-container" shortcut="Meta+Ctrl+Alt+]"/>
-  <Action name="split-view-left-right" shortcut="Alt+|"/>
-  <Action name="split-view-top-bottom" shortcut="Alt+_"/>
+  <Action name="split-view-left-right" shortcut="Meta+|"/>
+  <Action name="split-view-top-bottom" shortcut="Meta+_"/>
  </ActionProperties>
 </kpartgui>

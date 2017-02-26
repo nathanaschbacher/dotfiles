@@ -56,20 +56,20 @@
   <Action name="close-session"/>
  </Menu>
  <ActionProperties scheme="Default">
-  <Action name="clear-history-and-reset" shortcut="Alt+Shift+K"/>
-  <Action name="close-session" shortcut="Alt+W"/>
-  <Action name="edit_copy" shortcut="Alt+C"/>
-  <Action name="edit_find" shortcut="Alt+F"/>
-  <Action name="edit_find_next" shortcut="Alt+G"/>
-  <Action name="edit_find_prev" shortcut="Alt+Shift+G"/>
-  <Action name="edit_paste" shortcut="Alt+V; Shift+Ins"/>
-  <Action name="enlarge-font" shortcut="Alt+=; Ctrl+="/>
-  <Action name="select-all" shortcut="Alt+A"/>
-  <Action name="shrink-font" shortcut="Alt+-"/>
-  <Action name="file_print" shortcut="Alt+P"/>
-  <Action name="open-browser" shortcut="Alt+O"/>
-  <Action name="paste-selection" shortcut="Alt+Shift+V"/>
-  <Action name="rename-session" shortcut="Alt+Return"/>
+  <Action name="clear-history-and-reset" shortcut="Meta+Shift+K"/>
+  <Action name="close-session" shortcut="Meta+W"/>
+  <Action name="edit_copy" shortcut="Meta+C"/>
+  <Action name="edit_find" shortcut="Meta+F"/>
+  <Action name="edit_find_next" shortcut="Meta+G"/>
+  <Action name="edit_find_prev" shortcut="Meta+Shift+G"/>
+  <Action name="edit_paste" shortcut="Meta+V; Shift+Ins"/>
+  <Action name="enlarge-font" shortcut="Meta+=; Ctrl+="/>
+  <Action name="select-all" shortcut="Meta+A"/>
+  <Action name="shrink-font" shortcut="Meta+-"/>
+  <Action name="file_print" shortcut="Meta+P"/>
+  <Action name="open-browser" shortcut="Meta+O"/>
+  <Action name="paste-selection" shortcut="Meta+Shift+V"/>
+  <Action name="rename-session" shortcut="Meta+Return"/>
   <Action name="select-line" shortcut="Meta+Alt+A"/>
  </ActionProperties>
 </kpartgui>
