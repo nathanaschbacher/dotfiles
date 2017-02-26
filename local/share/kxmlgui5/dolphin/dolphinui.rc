@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui SYSTEM 'kpartgui.dtd'>
-<kpartgui name="dolphin" version="14">
+<kpartgui version="14" name="dolphin">
  <MenuBar>
   <Menu name="file">
    <Action name="new_menu"/>
@@ -85,7 +85,7 @@
    <Action name="invert_selection"/>
   </disable>
  </State>
- <ToolBar noMerge="1" name="mainToolBar">
+ <ToolBar name="mainToolBar" noMerge="1">
   <text context="@title:menu">Main Toolbar</text>
   <Action name="go_back"/>
   <Action name="go_forward"/>
@@ -99,11 +99,11 @@
   <Action name="split_view"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="Alt+[; Backspace" name="go_back" priority="0"/>
-  <Action shortcut="Alt+]" name="go_forward" priority="0"/>
+  <Action name="go_back" shortcut="Alt+[; " priority="0"/>
+  <Action name="go_forward" shortcut="Alt+]" priority="0"/>
   <Action name="go_up" priority="0"/>
-  <Action name="go_home" priority="0"/>
-  <Action name="stop" priority="0"/>
+  <Action name="go_home" shortcut="Alt+J" priority="0"/>
+  <Action name="stop" shortcut="Alt+." priority="0"/>
   <Action name="icons" priority="0"/>
   <Action name="compact" priority="0"/>
   <Action name="details" priority="0"/>
@@ -112,16 +112,30 @@
   <Action name="edit_cut" priority="0"/>
   <Action name="edit_copy" priority="0"/>
   <Action name="edit_paste" priority="0"/>
-  <Action shortcut="Alt+Shift+W" name="close_tab"/>
-  <Action shortcut="Alt+Shift+N" name="create_dir"/>
-  <Action shortcut="Alt+Backspace" name="delete"/>
-  <Action shortcut="Alt+Shift+A" name="invert_selection"/>
-  <Action shortcut="Alt+T; Ctrl+Shift+N" name="new_tab"/>
-  <Action shortcut="Alt+N" name="new_window"/>
-  <Action shortcut="Alt+Enter" name="properties"/>
-  <Action shortcut="Alt+R" name="reload"/>
-  <Action shortcut="Alt+Return" name="rename"/>
-  <Action shortcut="Alt+A" name="select_all"/>
-  <Action shortcut="Alt+Shift+T" name="show_terminal_panel"/>
+  <Action name="close_tab" shortcut="Alt+W"/>
+  <Action name="create_dir" shortcut="Alt+Shift+N"/>
+  <Action name="delete" shortcut="Alt+Del"/>
+  <Action name="invert_selection" shortcut="Alt+Shift+A"/>
+  <Action name="new_tab" shortcut="Alt+T; Ctrl+Shift+N"/>
+  <Action name="new_window" shortcut="Alt+N"/>
+  <Action name="properties" shortcut="Alt+I"/>
+  <Action name="reload" shortcut="Alt+R"/>
+  <Action name="rename" shortcut="Alt+Return"/>
+  <Action name="select_all" shortcut="Alt+A"/>
+  <Action name="show_terminal_panel" shortcut="Alt+Shift+T"/>
+  <Action name="delete_shortcut" shortcut="Alt+Shift+Backspace"/>
+  <Action name="editable_location" shortcut=""/>
+  <Action name="move_to_trash" shortcut="Alt+Backspace"/>
+  <Action name="open_in_new_tab" shortcut="Meta+Alt+T"/>
+  <Action name="open_in_new_window" shortcut="Meta+Alt+N"/>
+  <Action name="open_terminal" shortcut="Alt+Y"/>
+  <Action name="show_preview" shortcut="Ctrl+Space"/>
+  <Action name="compare_files" shortcut="Meta+Alt+D"/>
+  <Action name="options_configure" shortcut="Alt+,"/>
+  <Action name="options_show_menubar" shortcut="Ctrl+Shift+M"/>
+  <Action name="replace_location" shortcut="Alt+L"/>
+  <Action name="show_filter_bar" shortcut="Alt+K"/>
+  <Action name="show_hidden_files" shortcut="Meta+Alt+."/>
+  <Action name="split_view" shortcut="Alt+|"/>
  </ActionProperties>
 </kpartgui>
