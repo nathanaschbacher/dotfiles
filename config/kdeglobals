@@ -108,8 +108,6 @@ ForegroundVisited=127,140,141
 [General]
 ColorScheme=Breeze
 Name=Breeze
-XftAntialias=true
-XftHintStyle=hintnone
 dbfile=/home/nathan/.mozilla/firefox/ti7eg0f4.default/places.sqlite
 fixed=Menlo,9,-1,5,50,0,0,0,0,0
 font=.San Francisco Display,10,-1,5,57,0,0,0,0,0

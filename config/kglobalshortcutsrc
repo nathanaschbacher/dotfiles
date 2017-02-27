@@ -1,6 +1,6 @@
 [KDE Keyboard Layout Switcher]
 Switch to Next Keyboard Layout=none,none,Switch to Next Keyboard Layout
-_k_friendly_name=System Settings
+_k_friendly_name=KDE Daemon
 
 [kaccess]
 Toggle Screen Reader On and Off=none,Meta+Alt+S,Toggle Screen Reader On and Off
@@ -26,7 +26,7 @@ _k_friendly_name=Power Management
 display=Display,Display\tMeta+P,Switch Display
 
 [khotkeys]
-_k_friendly_name=System Settings
+_k_friendly_name=KDE Daemon
 {3ac12f26-1ce9-43cf-b8e9-b4b3b72818c9}=Meta+Ctrl+#,none,Start Screenshot Tool
 {6d0fbfa9-f153-435a-a136-78b2d3646c71}=Meta+#,none,Take Full Screen Screenshot
 {74ce42f2-5e23-4949-b002-7247e092fd3c}=Meta+Ctrl+$,none,Take Active Window Screenshot
@@ -200,8 +200,8 @@ Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
 _k_friendly_name=KWin
 view_actual_size=Meta+0,Meta+0,Actual Size
-view_zoom_in=Alt+=,Meta+=,Zoom In
-view_zoom_out=Alt+-,Meta+-,Zoom Out
+view_zoom_in=none,Meta+=,Zoom In
+view_zoom_out=none,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
