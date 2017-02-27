@@ -7,3 +7,5 @@ function mmmkey {
         echo "Provide a key type, Mmm'kay. [gpg | ssh \"Your Comment\"]"
     fi
 }
+
+source $HOME/Repositories/dotfiles/bash_ps1.sh 
