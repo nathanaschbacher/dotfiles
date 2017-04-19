@@ -137,7 +137,7 @@ Breadcrumb Navigation=true
 Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Previews=true
+Previews=false
 Show Bookmarks=false
 Show Full Path=false
 Show Preview=false
@@ -146,8 +146,9 @@ Show hidden files=false
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=133
-View Style=Simple
+Speedbar Width=138
+View Style=Detail
+detailedViewIconSize=0
 listViewIconSize=100
 
 [KScreen]

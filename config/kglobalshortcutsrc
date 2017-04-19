@@ -27,10 +27,10 @@ display=Display,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{3ac12f26-1ce9-43cf-b8e9-b4b3b72818c9}=Meta+Ctrl+#,none,Start Screenshot Tool
-{6d0fbfa9-f153-435a-a136-78b2d3646c71}=Meta+#,none,Take Full Screen Screenshot
-{74ce42f2-5e23-4949-b002-7247e092fd3c}=Meta+Ctrl+$,none,Take Active Window Screenshot
-{85617a46-3c98-4b65-bb16-60e7049cebf8}=Meta+$,none,Take Rectangular Region Screenshot
+{1771ee8d-8bc9-49aa-922c-c677301591a3}=Meta+#,none,Take Full Screen Screenshot
+{1cca18f0-24b4-41b9-af75-c343f8d1f5a5}=Meta+$,none,Take Rectangular Region Screenshot
+{8c5d48ac-3451-4ab0-a9ad-4d05a37f5861}=Meta+Alt+$,none,Take Active Window Screenshot
+{caee5589-f7d2-4fa9-ac7c-769a240fea77}=Meta+Ctrl+#,none,Start Screenshot Tool
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 
 [kmix]
@@ -198,7 +198,7 @@ Window to Screen 4=none,none,Window to Screen 4
 Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
-_k_friendly_name=KWin
+_k_friendly_name=System Settings Module
 view_actual_size=Meta+0,Meta+0,Actual Size
 view_zoom_in=none,Meta+=,Zoom In
 view_zoom_out=none,Meta+-,Zoom Out
@@ -222,7 +222,7 @@ activate task manager entry 6=none,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=none,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
-activate widget 3=none,none,Activate Application Launcher Widget
+activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

@@ -9,7 +9,7 @@ bootstrap_config()
     echo "    * rebuilding font cache."
     fc-cache -fv
     rm /tmp/Mac_Subset.zip
-    
+
     echo "Creating symlinks to custom config files."
     echo "    * emacs init.el and keybindings."
     ln -sf $HOME/Repositories/dotfiles/emacs.d $HOME/.emacs.d
@@ -21,11 +21,19 @@ bootstrap_config()
     ln -sf $HOME/Repositories/dotfiles/config/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
     ln -sf $HOME/Repositories/dotfiles/config/kdeglobals $HOME/.config/kdeglobals
     ln -sf $HOME/Repositories/dotfiles/config/kwinrc $HOME/.config/kwinrc
+    ln -sf $HOME/Repositories/dotfiles/config/breezerc $HOME/.config/breezerc
+    ln -sf $HOME/Repositories/dotfiles/config/kcminputrc $HOME/.config/kcminputrc
+    ln -sf $HOME/Repositories/dotfiles/config/plasmarc $HOME/.config/plasmarc
+    ln -sf $HOME/Repositories/dotfiles/config/touchpadrc $HOME/.config/touchpadrc
 
     echo "    * plasma .local/share/ files for settings and keybindings."
     ln -sf $HOME/Repositories/dotfiles/local/share/kxmlgui5/dolphin/dolphinui.rc $HOME/.local/share/kxmlgui5/dolphin/dolphinui.rc
     ln -sf $HOME/Repositories/dotfiles/local/share/kxmlgui5/konsole/konsoleui.rc $HOME/.local/share/kxmlgui5/konsole/konsoleui.rc
     ln -sf $HOME/Repositories/dotfiles/local/share/kxmlgui5/konsole/sessionui.rc $HOME/.local/share/kxmlgui5/konsole/sessionui.rc
+
+    echo "    * plasma ~/.gtkrc-2.0, .config/gtk-3.0 for gtk style & theme settings."
+    ln -sf $HOME/Repositories/dotfiles/config/gtkrc-2.0 $HOME/.gtkrc-2.0
+    ln -sf $HOME/Repositories/dotfiles/config/gtk-3.0 $HOME/.config/gtk-3.0
 
     echo "Setting up Bash aliases and prompts."
     echo "    * aliases aliased, promptly... Mmm'kay."
@@ -39,7 +47,7 @@ bootstrap_apps()
     sudo apt-get -y install build-essential openssh-server git curl htop virtualbox intel-microcode ttf-mscorefonts-installer dmz-cursor-theme emacs
     echo "    * removing emacs24-terminal.desktop because it's annoying."
     sudo rm /usr/share/applications/emacs24-terminal.desktop 
-    
+
     echo "Installing software from external sources."
     echo "    * slack."
     wget -O /tmp/slack-desktop-2.4.2-amd64.deb "https://downloads.slack-edge.com/linux_releases/slack-desktop-2.4.2-amd64.deb"
@@ -50,7 +58,7 @@ bootstrap_apps()
     wget -O /tmp/google-chrome-stable_current_amd64.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
     sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb
     rm /tmp/google-chrome-stable_current_amd64.deb
-    
+
     echo "    * google play music desktop app."
     wget -O /tmp/google-play-music-desktop-player_4.0.5_amd64.deb "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v4.1.1/google-play-music-desktop-player_4.0.5_amd64.deb"
     sudo dpkg -i /tmp/google-play-music-desktop-player_4.0.5_amd64.deb
