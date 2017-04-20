@@ -9,13 +9,13 @@ ShowMenuBarByDefault=false
 UseSingleInstance=true
 
 [MainWindow]
-Height 1080=960
-Height 1920=960
+Height 1080=802
+Height 1920=802
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAABLIAAAPAAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1080=1080
-Width 1920=1202
+Width 1920=1920
 
 [TabBar]
 TabBarPosition=Top

@@ -8,4 +8,6 @@ function mmmkey {
     fi
 }
 
+alias please='sudo "$BASH" -c "$(history -p !!)"'
+
 source $HOME/Repositories/dotfiles/bash_ps1.sh 
