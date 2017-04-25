@@ -15,7 +15,7 @@
     company company-erlang company-go company-ansible
     flycheck flycheck-rust flycheck-rebar3 flycheck-mix flycheck-elixir flycheck-dialyzer
     flyspell-lazy
-    rustfmt racer
+    racer
     smooth-scrolling expand-region highlight hlinum git-gutter-fringe
     helm helm-themes helm-projectile helm-flycheck
     projectile perspective persp-mode persp-projectile
@@ -41,6 +41,8 @@
 ;; Perform some global setup to the UX and Bindings
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
