@@ -20,12 +20,35 @@ Rows=1
 TabBox=false
 TabBoxAlternative=false
 
+[Effect-Cube]
+BorderActivate=9
+BorderActivateCylinder=9
+BorderActivateSphere=9
+
+[Effect-DesktopGrid]
+BorderActivate=9
+
 [Effect-FlipSwitch]
 TabBox=false
 TabBoxAlternative=false
 
+[Effect-PresentWindows]
+BorderActivate=9
+BorderActivateAll=9
+BorderActivateClass=9
+
 [Effect-Zoom]
 InitialZoom=1
+
+[ElectricBorders]
+Bottom=None
+BottomLeft=None
+BottomRight=None
+Left=None
+Right=None
+Top=None
+TopLeft=None
+TopRight=None
 
 [MouseBindings]
 CommandActiveTitlebar1=Raise
@@ -60,6 +83,8 @@ TextOnly=false
 [TabBox]
 ActivitiesMode=1
 ApplicationsMode=0
+BorderActivate=9
+BorderAlternativeActivate=9
 DesktopMode=1
 HighlightWindows=true
 LayoutName=big_icons
@@ -91,6 +116,12 @@ BorderSnapZone=10
 CenterSnapZone=0
 ClickRaise=true
 DelayFocusInterval=300
+ElectricBorderCooldown=350
+ElectricBorderCornerRatio=0.25
+ElectricBorderDelay=150
+ElectricBorderMaximize=true
+ElectricBorderTiling=true
+ElectricBorders=0
 FocusPolicy=ClickToFocus
 FocusStealingPreventionLevel=1
 GeometryTip=false

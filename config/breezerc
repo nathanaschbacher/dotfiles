@@ -2,4 +2,5 @@
 ShadowStrength=89
 
 [Windeco]
+ButtonSize=ButtonSmall
 DrawSizeGrip=false

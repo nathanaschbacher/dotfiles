@@ -1,2 +1,4 @@
-keycode 107 = Super_R Super_R Super_R Super_R
-keycode 151 = XF86WakeUp Multi_key XF86WakeUp
+!keycode 107 = Print Sys_Req Print Sys_Req
+!keycode 107 = Super_R NoSymbol Super_R
+!keycode 107 = Alt_R Meta_R Alt_R Meta_R
+keycode 107 = Alt_R Alt_R Alt_R Alt_R

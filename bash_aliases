@@ -9,5 +9,6 @@ function mmmkey {
 }
 
 alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias open='xdg-open'
 
 source $HOME/Repositories/dotfiles/bash_ps1.sh 

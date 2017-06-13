@@ -3,3 +3,7 @@ KeyboardRepeating=0
 NumLock=2
 RepeatDelay=430
 RepeatRate=50
+
+[Mouse]
+cursorSize=32
+cursorTheme=DMZ-Black

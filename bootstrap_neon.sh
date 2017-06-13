@@ -25,6 +25,8 @@ bootstrap_config()
     ln -sf $HOME/Repositories/dotfiles/config/kcminputrc $HOME/.config/kcminputrc
     ln -sf $HOME/Repositories/dotfiles/config/plasmarc $HOME/.config/plasmarc
     ln -sf $HOME/Repositories/dotfiles/config/touchpadrc $HOME/.config/touchpadrc
+    ln -sf $HOME/Repositories/dotfiles/config/kwinrulesrc $HOME/.config/kwinrulesrc
+    ln -sf $HOME/Repositories/dotfiles/config/khotkeysrc $HOME/.config/khotkeysrc
 
     echo "    * plasma .local/share/ files for settings and keybindings."
     ln -sf $HOME/Repositories/dotfiles/local/share/kxmlgui5/dolphin/dolphinui.rc $HOME/.local/share/kxmlgui5/dolphin/dolphinui.rc

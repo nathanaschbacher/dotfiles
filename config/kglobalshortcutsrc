@@ -27,11 +27,42 @@ display=Display,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{1771ee8d-8bc9-49aa-922c-c677301591a3}=Meta+#,none,Take Full Screen Screenshot
-{1cca18f0-24b4-41b9-af75-c343f8d1f5a5}=Meta+$,none,Take Rectangular Region Screenshot
-{8c5d48ac-3451-4ab0-a9ad-4d05a37f5861}=Meta+Alt+$,none,Take Active Window Screenshot
-{caee5589-f7d2-4fa9-ac7c-769a240fea77}=Meta+Ctrl+#,none,Start Screenshot Tool
+{040167af-b215-414c-85a5-bcecd6688cf2}=Meta+Shift+PgUp,none,Slack Prev Unread
+{1971c690-1430-4eac-b5ff-810356e88424}=Meta+Shift+Z,none,Chrome Redo
+{1e9b1c67-2075-4148-bafd-4ebafcd3cccb}=none,none,Start Screenshot Tool
+{2d3e46e6-b6a1-4bed-822f-8e0e694dffe5}=Meta+V,none,Chrome Paste
+{3307252f-a465-4a15-a95b-cfb7199a324b}=Meta+#,none,Take Full Screen Screenshot
+{3a69db9a-86ad-4ce0-bc9b-0d3eff007dec}=Meta+=,none,Chrome Zoom In
+{3d0ffa91-0821-4163-944a-33e1a84ee742}=Meta+Shift+N,none,Chrome New Incognito Window
+{3dd2ccc6-ee9d-47c1-931d-b59dc5427571}=Meta+R,none,Chrome Reload
+{44f6dde3-d2b2-4044-8aa6-dac9b8ee6ec3}=Meta+Ctrl+$,none,Take Active Window Screenshot
+{4cbcdef8-2ae9-4d8f-a743-f3408a16fa74}=Meta+Shift+Space,none,Slack Quick Switcher
+{4fd82ebb-e6e3-4b8d-bfbf-17ef849ca8f6}=Meta+F,none,Chrome Find
+{543fc462-c757-4e4c-a92f-163e4fb1c134}=Meta+{,none,Chrome Prev Tab
+{65e53ca1-e078-4916-ad13-9ae7738f5d5d}=Meta+PgDown,none,Slack Next in List
+{663b5eaf-ffbf-4931-ad4b-d0fdfd7ba7d3}=Meta+Shift+PgDown,none,Slack Next Unread
+{669513e0-9413-436c-b566-9f347547eb8c}=Meta+Q,none,Chrome Quit
+{6b47287f-81a3-4cfd-840e-590407020ad2}=Meta+X,none,Chrome Cut
+{7079ca21-1a7a-4766-8800-3748b3f1782d}=Meta+L,none,Chrome Address Bar
+{709386a1-1275-4d88-af40-971c888e9a11}=Meta+Shift+A,none,Chrome Select None
+{75cbab0c-a25c-498f-821a-e00bea1b236b}=Meta+N,none,Chrome New Window
+{93f6146e-b310-4269-b90c-1a394f5af8a1}=Meta+-,none,Chrome Zoom Out
+{9f2acbc4-9821-4e5d-8cf1-49f60b2a0c86}=Meta+Shift+V,none,Slack Paste and Match
+{a3482d6b-f582-4739-ac81-e090584f2917}=Meta+T,none,Chrome New Tab
+{a9d0ce8b-8b28-4bbf-8099-e63c0c5a23ef}=Meta+Z,none,Chrome Undo
+{be9987ca-c941-4dd7-991d-437f8ca62ed7}=Meta+},none,Chrome Next Tab
+{c23b7902-e1fc-4476-a48f-8ba114eb434c}=Meta+D,none,Chrome Bookmark
+{c72ee3df-d9bb-420a-bc84-abbabf69d2eb}=Meta+PgUp,none,Slack Prev in List
+{ca00d886-ce4d-4805-9b3b-7603820bd050}=Meta+$,none,Take Rectangular Region Screenshot
+{ca1de26a-d3e7-4082-a1c8-654bc417464b}=Meta+Shift+G,none,Chrome Find Previous
+{ca81e023-75f6-463d-a20d-aaf32e429298}=Meta+C,none,Chrome Copy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+{d0571fa3-f926-4fa4-b3a7-d354b30e7410}=Meta+U,none,Slack Upload
+{f0d4b96d-a0f8-453b-8e98-bb4a903e0964}=Meta+[,none,Chrome Back
+{f11728e7-c353-4e15-9a15-c4fb48408d6f}=Meta+A,none,Chrome Select All
+{f6e8b5cc-9a62-4d2e-a2d2-c0d640732614}=Meta+W,none,Chrome Close
+{f804d9bd-7844-479e-b126-3960b5dde48c}=Meta+],none,Chrome Forward
+{fdeb37fd-f7ce-4ca5-a0d3-cd6405570485}=Meta+G,none,Chrome Find Again
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -41,6 +72,11 @@ increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Mi
 increase_volume=Volume Up,Volume Up,Increase Volume
 mic_mute=Microphone Mute,Microphone Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
+
+[konversation]
+_k_friendly_name=Konversation
+next_active_tab=none,none,Next Active Tab
+toggle_mainwindow_visibility=none,none,Show/Hide Konversation
 
 [krunner]
 _k_friendly_name=Run Command
@@ -199,7 +235,7 @@ Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
 _k_friendly_name=KWin
-view_actual_size=Meta+0,Meta+0,Actual Size
+view_actual_size=,Meta+0,Actual Size
 view_zoom_in=none,Meta+=,Zoom In
 view_zoom_out=none,Meta+-,Zoom Out
 
@@ -222,6 +258,8 @@ activate task manager entry 6=none,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=none,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
+activate widget 16=none,none,Activate Battery and Brightness Widget
+activate widget 20=,none,Activate Application Dashboard Widget
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
