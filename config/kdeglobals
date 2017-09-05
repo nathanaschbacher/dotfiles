@@ -1,6 +1,9 @@
 [$Version]
 update_info=fonts_global.upd:Fonts_Global
 
+[Appmenu Style]
+Style=InApplication
+
 [ColorEffects:Disabled]
 Color=
 ColorAmount=
@@ -110,12 +113,12 @@ BrowserApplication=google-chrome.desktop
 ColorScheme=Breeze
 Name=Breeze
 dbfile=/home/nathan/.mozilla/firefox/ti7eg0f4.default/places.sqlite
-fixed=Menlo,9,-1,5,50,0,0,0,0,0
-font=.San Francisco Display,10,-1,5,57,0,0,0,0,0
-menuFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+fixed=Menlo,12,-1,5,50,0,0,0,0,0,Regular
+font=.San Francisco Display,12,-1,5,57,0,0,0,0,0,Medium
+menuFont=.San Francisco Display,12,-1,5,57,0,0,0,0,0,Medium
 shadeSortColumn=true
-smallestReadableFont=.San Francisco Display,8,-1,5,50,0,0,0,0,0
-toolBarFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0
+smallestReadableFont=.San Francisco Display,10,-1,5,50,0,0,0,0,0,Regular
+toolBarFont=.San Francisco Display,11,-1,5,57,0,0,0,0,0,Medium
 widgetStyle=Breeze
 
 [Icons]
@@ -125,6 +128,8 @@ Theme=breeze
 ColorScheme=Breeze
 DoubleClickInterval=400
 LookAndFeelPackage=org.kde.breeze.desktop
+ShowIconsInMenuItems=true
+ShowIconsOnPushButtons=true
 SingleClick=false
 StartDragDist=4
 StartDragTime=500
@@ -138,7 +143,7 @@ Breadcrumb Navigation=true
 Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Previews=false
+Previews=true
 Show Bookmarks=false
 Show Full Path=false
 Show Preview=false
@@ -147,9 +152,9 @@ Show hidden files=false
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=148
+Speedbar Width=156
 View Style=Detail
-detailedViewIconSize=0
+detailedViewIconSize=100
 listViewIconSize=100
 
 [KScreen]
@@ -203,10 +208,14 @@ Undo=Meta+Z
 ZoomIn=Meta+=
 ZoomOut=Meta+-
 
+[Toolbar style]
+ToolButtonStyle=TextBesideIcon
+ToolButtonStyleOtherToolbars=TextBesideIcon
+
 [WM]
 activeBackground=71,80,87
 activeBlend=255,255,255
-activeFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+activeFont=.San Francisco Display,11,-1,5,57,0,0,0,0,0,Medium
 activeForeground=239,240,241
 inactiveBackground=239,240,241
 inactiveBlend=75,71,67

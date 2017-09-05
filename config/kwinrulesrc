@@ -1,6 +1,6 @@
 [1]
 Description=Application settings for emacs24
-clientmachine=carbon
+clientmachine=nathan-thinkpad
 clientmachinematch=0
 shade[$d]
 shaderule[$d]

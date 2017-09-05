@@ -1,6 +1,12 @@
 [Common]
 ShadowStrength=89
 
+[Style]
+MenuItemDrawStrongFocus=true
+ScrollBarAddLineButtons=0
+ScrollBarSubLineButtons=0
+TabBarDrawCenteredTabs=false
+
 [Windeco]
 ButtonSize=ButtonSmall
 DrawSizeGrip=false

@@ -82,11 +82,11 @@ TextOnly=false
 
 [TabBox]
 ActivitiesMode=1
-ApplicationsMode=0
+ApplicationsMode=1
 BorderActivate=9
 BorderAlternativeActivate=9
-DesktopMode=1
-HighlightWindows=true
+DesktopMode=0
+HighlightWindows=false
 LayoutName=big_icons
 MinimizedMode=0
 MultiScreenMode=0
@@ -98,7 +98,7 @@ SwitchingMode=0
 ActivitiesMode=1
 ApplicationsMode=0
 DesktopMode=1
-HighlightWindows=true
+HighlightWindows=false
 LayoutName=org.kde.breeze.desktop
 MinimizedMode=0
 MultiScreenMode=0
@@ -142,7 +142,8 @@ WindowSnapZone=10
 
 [org.kde.kdecoration2]
 BorderSize=None
-ButtonsOnLeft=MS
-ButtonsOnRight=HIAX
+ButtonsOnLeft=XIA
+ButtonsOnRight=S
 CloseOnDoubleClickOnMenu=false
 library=org.kde.breeze
+theme[$d]

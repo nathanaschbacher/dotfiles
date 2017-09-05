@@ -5,5 +5,5 @@ RepeatDelay=430
 RepeatRate=50
 
 [Mouse]
-cursorSize=32
-cursorTheme=DMZ-Black
+cursorSize=24
+cursorTheme=Bread

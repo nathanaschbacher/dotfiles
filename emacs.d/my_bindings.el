@@ -2,9 +2,9 @@
 
 ;; This will make meta and super be in the same physical key location
 ;; as when on a Mac so that I don't get tripped up between computers.
-(when (eq system-type 'gnu/linux)
-  (setq x-super-keysym 'meta)
-  (setq x-meta-keysym 'super))
+;(when (eq system-type 'gnu/linux)
+;  (setq x-super-keysym 'meta)
+;  (setq x-meta-keysym 'super))
 
 (define-key global-map [?\s-,] 'customize)
 ;(define-key global-map [?\s-'] 'next-multiframe-window)
@@ -106,3 +106,5 @@
 (global-set-key (kbd "s-M-w") 'spiral-kill)
 (global-set-key (kbd "s-W") 'delete-window-then-frame)
 (global-set-key (kbd "s-w") 'kill-this-buffer)
+
+(global-set-key (kbd "C-S-m") 'menu-bar-mode)
