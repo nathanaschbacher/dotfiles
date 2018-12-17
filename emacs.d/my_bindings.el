@@ -2,9 +2,9 @@
 
 ;; This will make meta and super be in the same physical key location
 ;; as when on a Mac so that I don't get tripped up between computers.
-(when (eq system-type 'gnu/linux)
-  (setq x-super-keysym 'meta)
-  (setq x-meta-keysym 'super))
+;; (when (eq system-type 'gnu/linux)
+;;   (setq x-super-keysym 'meta)
+;;   (setq x-meta-keysym 'super))
 
 (define-key global-map [?\s-,] 'customize)
 ;(define-key global-map [?\s-'] 'next-multiframe-window)

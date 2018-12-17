@@ -1,5 +1,12 @@
+[$Version]
+update_info=powerdevil_move_shortcuts.upd:powerdevil_move_shortcuts
+
+[ActivityManager]
+_k_friendly_name=Activity Manager
+switch-to-activity-78a1493c-56cc-4e8e-ada2-aadd9e672412=none,none,Switch to activity "Default"
+
 [KDE Keyboard Layout Switcher]
-Switch to Next Keyboard Layout=none,none,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=none,Ctrl+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=KDE Daemon
 
 [kaccess]
@@ -13,25 +20,57 @@ Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
 _k_friendly_name=KDE Daemon
 
 [kded5]
-Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
-Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness
-Hibernate=none,Hibernate,Hibernate
-Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness
-Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness
-PowerOff=none,Power Off,Power Off
+Decrease Keyboard Brightness[$d]
+Decrease Screen Brightness[$d]
+Hibernate[$d]
+Increase Keyboard Brightness[$d]
+Increase Screen Brightness[$d]
+PowerOff[$d]
 Show System Activity=Meta+Alt+Esc,Ctrl+Esc,Show System Activity
-Sleep=Sleep,Sleep,Suspend
-Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
+Sleep[$d]
+Toggle Keyboard Backlight[$d]
 _k_friendly_name=KDE Daemon
 display=Display,Display\tMeta+P,Switch Display
 
 [khotkeys]
-_k_friendly_name=System Settings
+_k_friendly_name=KDE Daemon
+{040167af-b215-414c-85a5-bcecd6688cf2}=Meta+Shift+PgUp,none,Slack Prev Unread
+{1971c690-1430-4eac-b5ff-810356e88424}=Meta+Shift+Z,none,Chrome Redo
 {1e9b1c67-2075-4148-bafd-4ebafcd3cccb}=none,none,Start Screenshot Tool
+{2d3e46e6-b6a1-4bed-822f-8e0e694dffe5}=Meta+V,none,Chrome Paste
 {3307252f-a465-4a15-a95b-cfb7199a324b}=Meta+#,none,Take Full Screen Screenshot
+{3a69db9a-86ad-4ce0-bc9b-0d3eff007dec}=Meta+=,none,Chrome Zoom In
+{3d0ffa91-0821-4163-944a-33e1a84ee742}=Meta+Shift+N,none,Chrome New Incognito Window
+{3dd2ccc6-ee9d-47c1-931d-b59dc5427571}=Meta+R,none,Chrome Reload
 {44f6dde3-d2b2-4044-8aa6-dac9b8ee6ec3}=Meta+Ctrl+$,none,Take Active Window Screenshot
+{4cbcdef8-2ae9-4d8f-a743-f3408a16fa74}=Meta+Shift+Space,none,Slack Quick Switcher
+{4fd82ebb-e6e3-4b8d-bfbf-17ef849ca8f6}=Meta+F,none,Chrome Find
+{543fc462-c757-4e4c-a92f-163e4fb1c134}=Meta+{,none,Chrome Prev Tab
+{575c4304-d64e-458f-b878-47dca7eb578e}=Ctrl+Alt+T,none,Launch Konsole
+{65e53ca1-e078-4916-ad13-9ae7738f5d5d}=Meta+PgDown,none,Slack Next in List
+{663b5eaf-ffbf-4931-ad4b-d0fdfd7ba7d3}=Meta+Shift+PgDown,none,Slack Next Unread
+{669513e0-9413-436c-b566-9f347547eb8c}=Meta+Q,none,Chrome Quit
+{6b47287f-81a3-4cfd-840e-590407020ad2}=Meta+X,none,Chrome Cut
+{7079ca21-1a7a-4766-8800-3748b3f1782d}=Meta+L,none,Chrome Address Bar
+{709386a1-1275-4d88-af40-971c888e9a11}=Meta+Shift+A,none,Chrome Select None
+{75cbab0c-a25c-498f-821a-e00bea1b236b}=Meta+N,none,Chrome New Window
+{93f6146e-b310-4269-b90c-1a394f5af8a1}=Meta+-,none,Chrome Zoom Out
+{9f2acbc4-9821-4e5d-8cf1-49f60b2a0c86}=Meta+Shift+V,none,Slack Paste and Match
+{a3482d6b-f582-4739-ac81-e090584f2917}=Meta+T,none,Chrome New Tab
+{a9d0ce8b-8b28-4bbf-8099-e63c0c5a23ef}=Meta+Z,none,Chrome Undo
+{be9987ca-c941-4dd7-991d-437f8ca62ed7}=Meta+},none,Chrome Next Tab
+{c23b7902-e1fc-4476-a48f-8ba114eb434c}=Meta+D,none,Chrome Bookmark
+{c72ee3df-d9bb-420a-bc84-abbabf69d2eb}=Meta+PgUp,none,Slack Prev in List
 {ca00d886-ce4d-4805-9b3b-7603820bd050}=Meta+$,none,Take Rectangular Region Screenshot
+{ca1de26a-d3e7-4082-a1c8-654bc417464b}=Meta+Shift+G,none,Chrome Find Previous
+{ca81e023-75f6-463d-a20d-aaf32e429298}=Meta+C,none,Chrome Copy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+{d0571fa3-f926-4fa4-b3a7-d354b30e7410}=Meta+U,none,Slack Upload
+{f0d4b96d-a0f8-453b-8e98-bb4a903e0964}=Meta+[,none,Chrome Back
+{f11728e7-c353-4e15-9a15-c4fb48408d6f}=Meta+A,none,Chrome Select All
+{f6e8b5cc-9a62-4d2e-a2d2-c0d640732614}=Meta+W,none,Chrome Close
+{f804d9bd-7844-479e-b126-3960b5dde48c}=Meta+],none,Chrome Forward
+{fdeb37fd-f7ce-4ca5-a0d3-cd6405570485}=Meta+G,none,Chrome Find Again
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -71,10 +110,10 @@ Invert Screen Colors=none,none,Invert Screen Colors
 Kill Window=none,Ctrl+Alt+Esc,Kill Window
 MoveMouseToCenter=none,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=none,Meta+F5,Move Mouse to Focus
-MoveZoomDown=none,Meta+Down,Move Zoomed Area Downwards
-MoveZoomLeft=,Meta+Left,Move Zoomed Area to Left
-MoveZoomRight=,Meta+Right,Move Zoomed Area to Right
-MoveZoomUp=none,Meta+Up,Move Zoomed Area Upwards
+MoveZoomDown=none,none,Move Zoomed Area Downwards
+MoveZoomLeft=,none,Move Zoomed Area to Left
+MoveZoomRight=,none,Move Zoomed Area to Right
+MoveZoomUp=none,none,Move Zoomed Area Upwards
 Remove Window From Group=none,none,Remove Window From Group
 Setup Window Shortcut=none,none,Setup Window Shortcut
 Show Desktop=F11,none,Show Desktop
@@ -142,10 +181,10 @@ Window Fullscreen=Meta+Ctrl+F,none,Make Window Fullscreen
 Window Grow Horizontal=none,none,Pack Grow Window Horizontally
 Window Grow Vertical=none,none,Pack Grow Window Vertically
 Window Lower=none,none,Lower Window
-Window Maximize=Meta+Shift+M,none,Maximize Window
+Window Maximize=Meta+Shift+M,Meta+PgUp,Maximize Window
 Window Maximize Horizontal=Meta+Alt+Shift+M,none,Maximize Window Horizontally
 Window Maximize Vertical=Ctrl+Alt+Shift+M,none,Maximize Window Vertically
-Window Minimize=Meta+M,none,Minimize Window
+Window Minimize=Meta+M,Meta+PgDown,Minimize Window
 Window Move=none,none,Move Window
 Window No Border=none,none,Hide Window Border
 Window On All Desktops=none,none,Keep Window on All Desktops
@@ -158,14 +197,14 @@ Window Pack Down=none,none,Pack Window Down
 Window Pack Left=none,none,Pack Window to the Left
 Window Pack Right=none,none,Pack Window to the Right
 Window Pack Up=none,none,Pack Window Up
-Window Quick Tile Bottom=Meta+Alt+Down,none,Quick Tile Window to the Bottom
-Window Quick Tile Bottom Left=Meta+Alt+Home,none,Quick Tile Window to the Bottom Left
+Window Quick Tile Bottom=Meta+Alt+Down,Meta+Down,Quick Tile Window to the Bottom
+Window Quick Tile Bottom Left=Meta+Alt+End,none,Quick Tile Window to the Bottom Left
 Window Quick Tile Bottom Right=Meta+Alt+PgDown,none,Quick Tile Window to the Bottom Right
-Window Quick Tile Left=Meta+Alt+Left,none,Quick Tile Window to the Left
-Window Quick Tile Right=Meta+Alt+Right,none,Quick Tile Window to the Right
-Window Quick Tile Top=Meta+Alt+Up,none,Quick Tile Window to the Top
-Window Quick Tile Top Left=Meta+Alt+PgUp,none,Quick Tile Window to the Top Left
-Window Quick Tile Top Right=Meta+Alt+End,none,Quick Tile Window to the Top Right
+Window Quick Tile Left=Meta+Alt+Left,Meta+Left,Quick Tile Window to the Left
+Window Quick Tile Right=Meta+Alt+Right,Meta+Right,Quick Tile Window to the Right
+Window Quick Tile Top=Meta+Alt+Up,Meta+Up,Quick Tile Window to the Top
+Window Quick Tile Top Left=Meta+Alt+Home,none,Quick Tile Window to the Top Left
+Window Quick Tile Top Right=Meta+Alt+PgUp,none,Quick Tile Window to the Top Right
 Window Raise=none,none,Raise Window
 Window Resize=none,none,Resize Window
 Window Shade=none,none,Shade Window
@@ -210,10 +249,23 @@ view_zoom_out=none,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
+mediavolumedown=,none,Media volume down
+mediavolumeup=,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
+
+[org_kde_powerdevil]
+Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
+Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness
+Hibernate=none,Hibernate,Hibernate
+Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness
+Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness
+PowerOff=none,Power Off,Power Off
+Sleep=Sleep,Sleep,Suspend
+Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
+_k_friendly_name=Power Management
 
 [plasmashell]
 _k_friendly_name=Plasma
@@ -228,8 +280,8 @@ activate task manager entry 7=none,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
 activate widget 16=none,none,Activate Battery and Brightness Widget
-activate widget 20=,none,Activate Application Dashboard Widget
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
+activate widget 66=none,none,Activate Application Dashboard Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

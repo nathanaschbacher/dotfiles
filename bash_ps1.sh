@@ -52,7 +52,7 @@ get_my_prompt()
 		C)
 		    ((ADDED++)) ;;
 		M)
-                    ((MODIFIED++)) ;;
+            ((MODIFIED++)) ;;
 		R)
 		    ((DELETED++)); ((ADDED++)) ;;
 		D)

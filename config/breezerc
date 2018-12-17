@@ -1,6 +1,9 @@
 [Common]
 ShadowStrength=89
 
+[Style]
+TabBarDrawCenteredTabs=false
+
 [Windeco]
 ButtonSize=ButtonSmall
 DrawSizeGrip=false

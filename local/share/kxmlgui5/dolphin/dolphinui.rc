@@ -1,26 +1,28 @@
 <!DOCTYPE kpartgui SYSTEM 'kpartgui.dtd'>
-<kpartgui name="dolphin" version="15">
+<kpartgui name="dolphin" version="21">
  <MenuBar>
   <Menu name="file">
    <Action name="new_menu"/>
-   <Action name="new_window"/>
+   <Action name="file_new"/>
    <Action name="new_tab"/>
-   <Action name="close_tab"/>
+   <Action name="file_close"/>
    <Action name="undo_close_tab"/>
    <Separator/>
-   <Action name="rename"/>
-   <Action name="move_to_trash"/>
+   <Action name="renamefile"/>
+   <Action name="movetotrash"/>
    <Action name="deletefile"/>
+   <Separator/>
+   <Action name="show_target"/>
    <Separator/>
    <Action name="properties"/>
   </Menu>
   <Menu name="edit">
-   <Action name="select_all"/>
+   <Action name="edit_select_all"/>
    <Action name="invert_selection"/>
   </Menu>
   <Menu name="view">
-   <Action name="view_mode"/>
    <Action name="sort"/>
+   <Action name="view_mode"/>
    <Action name="additional_info"/>
    <Action name="show_preview"/>
    <Action name="show_in_groups"/>
@@ -28,7 +30,7 @@
    <Separator/>
    <Action name="split_view"/>
    <Action name="split_stash"/>
-   <Action name="reload"/>
+   <Action name="redisplay"/>
    <Action name="stop"/>
    <Separator/>
    <Action name="panels"/>
@@ -50,7 +52,7 @@
    <Action name="change_remote_encoding"/>
   </Menu>
  </MenuBar>
- <ToolBar noMerge="1" name="mainToolBar">
+ <ToolBar name="mainToolBar" noMerge="1">
   <text context="@title:menu">Main Toolbar</text>
   <Action name="go_back"/>
   <Action name="go_forward"/>
@@ -69,8 +71,8 @@
    <Action name="edit_redo"/>
    <Action name="edit_cut"/>
    <Action name="edit_copy"/>
-   <Action name="rename"/>
-   <Action name="move_to_trash"/>
+   <Action name="renamefile"/>
+   <Action name="movetotrash"/>
    <Action name="deletefile"/>
    <Action name="invert_selection"/>
    <Separator/>
@@ -82,8 +84,8 @@
   <enable>
    <Action name="edit_cut"/>
    <Action name="edit_copy"/>
-   <Action name="rename"/>
-   <Action name="move_to_trash"/>
+   <Action name="renamefile"/>
+   <Action name="movetotrash"/>
    <Action name="deletefile"/>
    <Action name="invert_selection"/>
   </enable>
@@ -92,52 +94,54 @@
   <disable>
    <Action name="edit_cut"/>
    <Action name="edit_copy"/>
-   <Action name="rename"/>
-   <Action name="move_to_trash"/>
+   <Action name="renamefile"/>
+   <Action name="movetotrash"/>
    <Action name="deletefile"/>
    <Action name="delete_shortcut"/>
    <Action name="invert_selection"/>
   </disable>
  </State>
  <ActionProperties scheme="Default">
-  <Action name="close_tab" shortcut="Meta+Shift+W"/>
-  <Action priority="0" name="compact"/>
-  <Action name="compare_files" shortcut="Meta+Alt+D"/>
-  <Action name="create_dir" shortcut="Meta+Shift+N"/>
-  <Action name="delete" shortcut="Meta+Del"/>
-  <Action name="delete_shortcut" shortcut="Meta+Shift+Backspace"/>
-  <Action priority="0" name="details"/>
-  <Action priority="0" name="edit_copy"/>
-  <Action priority="0" name="edit_cut"/>
-  <Action priority="0" name="edit_paste"/>
-  <Action name="editable_location" shortcut=""/>
-  <Action name="file_quit" shortcut="Meta+W; Meta+Q"/>
-  <Action priority="0" name="go_back" shortcut="Meta+[; "/>
-  <Action priority="0" name="go_forward" shortcut="Meta+]"/>
-  <Action priority="0" name="go_home"/>
-  <Action priority="0" name="go_up"/>
-  <Action priority="0" name="icons"/>
-  <Action name="invert_selection" shortcut="Meta+Shift+A"/>
-  <Action name="move_to_trash" shortcut="Meta+Backspace"/>
-  <Action name="new_tab" shortcut="Meta+T; Ctrl+Shift+N"/>
-  <Action name="new_window" shortcut="Meta+N"/>
-  <Action name="open_in_new_tab" shortcut="Meta+Alt+T"/>
-  <Action name="open_in_new_window" shortcut="Meta+Alt+N"/>
-  <Action name="open_terminal" shortcut="Meta+Y"/>
-  <Action name="options_configure" shortcut="Meta+,"/>
-  <Action name="options_show_menubar" shortcut="Ctrl+Shift+M"/>
-  <Action name="properties" shortcut="Meta+I"/>
-  <Action name="reload" shortcut="Meta+R"/>
-  <Action name="rename" shortcut="Meta+Return"/>
-  <Action name="replace_location" shortcut="Meta+L"/>
-  <Action name="select_all" shortcut="Meta+A"/>
-  <Action name="show_filter_bar" shortcut="Meta+K"/>
-  <Action name="show_hidden_files" shortcut="Meta+Alt+."/>
-  <Action name="show_preview" shortcut="Ctrl+Space"/>
-  <Action name="show_terminal_panel" shortcut="Meta+Shift+T"/>
-  <Action name="split_view" shortcut="Meta+|"/>
-  <Action priority="0" name="stop" shortcut="Meta+."/>
-  <Action priority="0" name="view_zoom_in"/>
-  <Action priority="0" name="view_zoom_out"/>
+  <Action shortcut="Meta+Shift+W" name="close_tab"/>
+  <Action name="compact" priority="0"/>
+  <Action shortcut="Meta+Alt+D" name="compare_files"/>
+  <Action shortcut="Meta+Shift+N" name="create_dir"/>
+  <Action shortcut="Meta+Del" name="delete"/>
+  <Action shortcut="Meta+Shift+Backspace" name="delete_shortcut"/>
+  <Action name="details" priority="0"/>
+  <Action name="edit_copy" priority="0"/>
+  <Action name="edit_cut" priority="0"/>
+  <Action name="edit_paste" priority="0"/>
+  <Action shortcut="" name="editable_location"/>
+  <Action shortcut="Meta+W; " name="file_quit"/>
+  <Action shortcut="Meta+[; " name="go_back" priority="0"/>
+  <Action shortcut="Meta+]" name="go_forward" priority="0"/>
+  <Action name="go_home" priority="0"/>
+  <Action name="go_up" priority="0"/>
+  <Action name="icons" priority="0"/>
+  <Action shortcut="Meta+Shift+A" name="invert_selection"/>
+  <Action shortcut="Meta+Backspace" name="move_to_trash"/>
+  <Action shortcut="Meta+T; Ctrl+Shift+N" name="new_tab"/>
+  <Action shortcut="Meta+N" name="new_window"/>
+  <Action shortcut="Meta+Alt+T" name="open_in_new_tab"/>
+  <Action shortcut="Meta+Alt+N" name="open_in_new_window"/>
+  <Action shortcut="Meta+Y" name="open_terminal"/>
+  <Action shortcut="Meta+," name="options_configure"/>
+  <Action shortcut="Ctrl+Shift+M" name="options_show_menubar"/>
+  <Action shortcut="Meta+I" name="properties"/>
+  <Action shortcut="Meta+R" name="reload"/>
+  <Action shortcut="Meta+Return" name="rename"/>
+  <Action shortcut="Meta+L" name="replace_location"/>
+  <Action shortcut="Meta+A" name="select_all"/>
+  <Action shortcut="Meta+K" name="show_filter_bar"/>
+  <Action shortcut="Meta+Alt+." name="show_hidden_files"/>
+  <Action shortcut="Ctrl+Space" name="show_preview"/>
+  <Action shortcut="Meta+Shift+T" name="show_terminal_panel"/>
+  <Action shortcut="Meta+|" name="split_view"/>
+  <Action shortcut="Meta+." name="stop" priority="0"/>
+  <Action name="view_zoom_in" priority="0"/>
+  <Action name="view_zoom_out" priority="0"/>
+  <Action shortcut="Meta+Shift+W; " name="file_close"/>
+  <Action shortcut="Meta+Return" name="renamefile"/>
  </ActionProperties>
 </kpartgui>

@@ -1,3 +1,6 @@
+[$Version]
+update_info=kwin.upd:replace-scalein-with-scale
+
 [Compositing]
 AnimationSpeed=3
 Backend=OpenGL
@@ -85,6 +88,8 @@ ActivitiesMode=1
 ApplicationsMode=0
 BorderActivate=9
 BorderAlternativeActivate=9
+DesktopLayout=org.kde.breeze.desktop
+DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=1
 HighlightWindows=true
 LayoutName=big_icons
@@ -142,7 +147,8 @@ WindowSnapZone=10
 
 [org.kde.kdecoration2]
 BorderSize=None
-ButtonsOnLeft=MS
-ButtonsOnRight=HIAX
+ButtonsOnLeft=XIA
+ButtonsOnRight=SM
 CloseOnDoubleClickOnMenu=false
 library=org.kde.breeze
+theme[$d]

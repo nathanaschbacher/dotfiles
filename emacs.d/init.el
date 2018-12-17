@@ -9,7 +9,7 @@
 (defvar my-packages
   '(
     exec-path-from-shell
-    erlang elixir-mode alchemist lfe-mode rust-mode go-mode ponylang-mode
+    erlang elixir-mode alchemist rust-mode go-mode
     ansible cargo
     markdown-mode yaml-mode toml-mode json-mode
     company company-erlang company-go company-ansible
@@ -29,7 +29,7 @@
   (loop for p in my-packages
         when (not (package-installed-p p)) do (return nil)
         finally (return t)))
- 
+
 (unless (my-packages-installed-p)
   ;; check for new packages (package versions)
   (package-refresh-contents)
@@ -52,7 +52,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 ;(global-set-key (kbd "s-\\") 'company-complete)
 (setq company-idle-delay 0.3)
- 
+
 (load-theme 'monokai t)
 (setq-default cursor-type 'bar)
 (setq inhibit-splash-screen t
@@ -85,15 +85,15 @@
 (set-face-foreground 'git-gutter-fr:modified "gold1")
 (set-face-foreground 'git-gutter-fr:added    "YellowGreen")
 (set-face-foreground 'git-gutter-fr:deleted  "tomato3")
-		
-(defun p-window () 
+
+(defun p-window ()
     (interactive)
     (other-window -1))
-(defun n-window () 
+(defun n-window ()
     (interactive)
     (other-window 1))
 
-(defun split-n-switch (direction) 
+(defun split-n-switch (direction)
     (select-window
       (pcase direction
         (0 (split-window-right))
@@ -107,13 +107,13 @@
 
 (defun spiral-close ()
   (interactive)
-  (if (> (length (window-list)) 1) 
+  (if (> (length (window-list)) 1)
       (delete-window-then-frame)
     (kill-buffer (current-buffer))))
 
 (defun spiral-kill ()
   (interactive)
-  (if (> (length (window-list)) 1) 
+  (if (> (length (window-list)) 1)
       (kill-buffer (current-buffer))
     (delete-window-then-frame)))
 
@@ -308,6 +308,9 @@
      ("Sans Serif" "helv" "helvetica" "arial" "fixed")
      ("helv" "helvetica" "arial" "fixed"))))
  '(initial-scratch-message nil)
+ '(package-selected-packages
+   (quote
+    (yaml-mode undo-tree toml-mode smooth-scrolling rustfmt racer persp-projectile persp-mode nyan-mode monokai-theme markdown-mode magit json-mode hlinum highlight helm-themes helm-projectile helm-flycheck git-gutter-fringe flyspell-lazy flycheck-rust flycheck-rebar3 flycheck-mix flycheck-elixir flycheck-dialyzer flatland-theme flatland-black-theme expand-region exec-path-from-shell company-go company-erlang company-distel company-ansible cargo ansible alchemist)))
  '(recentf-mode t)
  '(scroll-bar-mode nil))
 (custom-set-faces

@@ -1,14 +1,14 @@
-function mmmkey {
-    if [ "$1" == "gpg" ]; then
-        gpg --gen-key
-    elif [ "$1" == "ssh" ]; then
-	ssh-keygen -t rsa -b 4096 -C "$2"
-    else
-        echo "Provide a key type, Mmm'kay. [gpg | ssh \"Your Comment\"]"
-    fi
-}
 
 alias please='sudo "$BASH" -c "$(history -p !!)"'
 alias open='xdg-open'
 
-source $HOME/Repositories/dotfiles/bash_ps1.sh 
+export EDITOR=emacs
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+unset SSH_AGENT_PID
+$(gpg-connect-agent --no-autostart killagent /bye > /dev/null 2>&1)
+$(gpg-connect-agent --quiet /bye > /dev/null 2>&1)
+export GPG_TTY=$(tty)
+
+source $HOME/Repositories/dotfiles/bash_ps1.sh

@@ -1,25 +1,27 @@
 [$Version]
-update_info=fonts_global.upd:Fonts_Global
+update_info=fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,filepicker.upd:filepicker-remove-old-previews-entry
 
 [ColorEffects:Disabled]
-Color=
-ColorAmount=
-ColorEffect=
-ContrastAmount=
-ContrastEffect=
-IntensityAmount=
-IntensityEffect=
+ChangeSelectionColor=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=2
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=
-ColorAmount=
-ColorEffect=
-ContrastAmount=
-ContrastEffect=
+Color=112,111,110
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
 Enable=false
-IntensityAmount=
-IntensityEffect=
+IntensityAmount=0
+IntensityEffect=0
 
 [Colors:Button]
 BackgroundAlternate=189,195,199
@@ -31,7 +33,7 @@ ForegroundInactive=127,140,141
 ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=49,54,59
+ForegroundNormal=35,38,39
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
@@ -40,13 +42,13 @@ BackgroundAlternate=59,64,69
 BackgroundNormal=49,54,59
 DecorationFocus=30,146,255
 DecorationHover=61,174,230
-ForegroundActive=246,116,0
+ForegroundActive=147,206,233
 ForegroundInactive=175,176,179
 ForegroundLink=61,174,230
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
+ForegroundNegative=231,76,60
+ForegroundNeutral=253,188,75
 ForegroundNormal=239,240,241
-ForegroundPositive=17,209,22
+ForegroundPositive=46,204,113
 ForegroundVisited=61,174,230
 
 [Colors:Selection]
@@ -59,13 +61,13 @@ ForegroundInactive=239,240,241
 ForegroundLink=253,188,75
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=77,77,77
-BackgroundNormal=49,54,59
+BackgroundNormal=35,38,39
 DecorationFocus=61,174,233
 DecorationHover=147,206,233
 ForegroundActive=61,174,233
@@ -73,7 +75,7 @@ ForegroundInactive=189,195,199
 ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
@@ -87,7 +89,7 @@ ForegroundInactive=127,140,141
 ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=49,54,59
+ForegroundNormal=35,38,39
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
@@ -101,21 +103,27 @@ ForegroundInactive=127,140,141
 ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=49,54,59
+ForegroundNormal=35,38,39
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
+
+[DirSelect Dialog]
+DirSelectDialog Size=640,480
 
 [General]
 BrowserApplication=google-chrome.desktop
 ColorScheme=Breeze
 Name=Breeze
+XftAntialias=true
+XftHintStyle=hintnone
+XftSubPixel=rgb
 dbfile=/home/nathan/.mozilla/firefox/ti7eg0f4.default/places.sqlite
-fixed=Menlo,9,-1,5,50,0,0,0,0,0
-font=.San Francisco Display,10,-1,5,57,0,0,0,0,0
-menuFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
+fixed=Menlo,9,-1,5,50,0,0,0,0,0,Regular
+font=.San Francisco Display,9,-1,5,57,0,0,0,0,0,Medium
+menuFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0,Medium
 shadeSortColumn=true
-smallestReadableFont=.San Francisco Display,8,-1,5,50,0,0,0,0,0
-toolBarFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0
+smallestReadableFont=.San Francisco Display,8,-1,5,57,0,0,0,0,0,Medium
+toolBarFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0,Medium
 widgetStyle=Breeze
 
 [Icons]
@@ -138,16 +146,17 @@ Breadcrumb Navigation=true
 Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Previews=false
+Previews[$d]
 Show Bookmarks=false
 Show Full Path=false
+Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
 Show hidden files=false
-Sort by=Name
+Sort by=Date
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=148
+Speedbar Width=157
 View Style=Detail
 detailedViewIconSize=0
 listViewIconSize=100
@@ -205,9 +214,9 @@ ZoomOut=Meta+-
 
 [WM]
 activeBackground=71,80,87
-activeBlend=255,255,255
-activeFont=.San Francisco Display,10,-1,5,57,0,0,0,0,0
-activeForeground=239,240,241
+activeBlend=252,252,252
+activeFont=.San Francisco Display,9,-1,5,57,0,0,0,0,0,Medium
+activeForeground=252,252,252
 inactiveBackground=239,240,241
 inactiveBlend=75,71,67
 inactiveForeground=189,195,199
