@@ -39,9 +39,14 @@ bootstrap_configs()
 
     echo "Setting up Bash aliases, prompts, and extra settings."
     ln -sf $HOME/Repositories/dotfiles/bash_aliases $HOME/.bash_aliases
-    
+
     echo "Setting up GnuPG Agent SSH support."
     echo "enable-ssh-support" | tee $HOME/.gnupg/gpg-agent.conf
+
+    echo "Setting global Git config defaults."
+    git config --global user.name "Nathan Aschbacher"
+    git config --global user.email "nathan.aschbacher@gmail.com"
+    git config --global commit.gpgsign true
 }
 
 bootstrap_packages()
@@ -51,26 +56,26 @@ bootstrap_packages()
     sudo add-apt-repository ppa:kelleyk/emacs
     sudo add-apt-repository ppa:mozillateam/ppa
     echo "deb http://binaries.erlang-solutions.com/debian bionic contrib" | sudo tee /etc/apt/sources.list.d/erlang-solutions.list
-    
+
     echo "Installing software from apt repositories."
     sudo apt-get update
-    sudo apt-get -y install apt-transport-https build-essential openssh-server git curl htop intel-microcode ttf-mscorefonts-installer dmz-cursor-theme gpg gpg-agent pcscd scdaemon krita kdenetwork-filesharing kompare konversation pinentry-qt  qemu-system-arm qemu-system-x86 ssss tp-smapi-dkms acpi-call-dkms tlp wget
+    sudo apt-get -y install apt-transport-https build-essential openssh-server git curl htop intel-microcode ttf-mscorefonts-installer dmz-cursor-theme gpg gpg-agent pcscd scdaemon krita kdenetwork-filesharing kompare konversation pinentry-qt  qemu-system-arm qemu-system-x86 ssss acpi-call-dkms tlp wget
 
     echo "Installing yubikey management tools."
     sudo apt install yubikey-manager yubikey-personalization
-    
+
     echo "Installing Emacs 26."
     sudo apt install emacs26
-    
+
     echo "Installing Thunderbird from PPA."
     sudo apt install thunderbird enigmail
-    
+
     echo "Installing Erlang and Elixir."
     sudo apt install esl-erlang elixir
 }
 
 bootstrap_apps()
-{ 
+{
     echo "Installing desktop applications from external sources."
     echo "    * slack."
     wget -O /tmp/slack-desktop-3.3.3-amd64.deb "https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.3-amd64.deb"
@@ -94,16 +99,19 @@ bootstrap_apps()
     $HOME/.cargo/bin/cargo install racer
 }
 
-dell_modmap()
+dell_specific()
 {
     echo "Creating symlinks to Dell Keyboard Xmodmap."
     ln -sf $HOME/Repositories/dotfiles/config/Dell-Xmodmap $HOME/.Xmodmap
 }
 
-thinkpad_modmap()
+thinkpad_specific()
 {
     echo "Creating symlinks to Thinkpad Keyboard Xmodmap."
     ln -sf $HOME/Repositories/dotfiles/config/Thinkpad-Xmodmap $HOME/.Xmodmap
+
+    echo "Installing Thinkpad SMAPI DKMS modules"
+    sudo apt install tp-smapi-dkms
 }
 
 if [ "$1" == "configs" ]; then
@@ -112,13 +120,13 @@ elif [ "$1" == "packages" ]; then
     bootstrap_packages
 elif [ "$1" == "apps" ]; then
     bootstrap_apps
-elif [ "$1" == "keymap" ]; then
+elif [ "$1" == "machine" ]; then
     if [ "$2" == "dell" ]; then
-        dell_modmap
+        dell_specific
     elif [ "$2" == "thinkpad" ]; then
-        thinkpad_modmap
+        thinkpad_specific
     else
-        echo "Invalid keymap option."
+        echo "Invalid machine type option."
         exit 2
     fi
 else

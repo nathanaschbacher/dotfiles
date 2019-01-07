@@ -9,19 +9,47 @@
 (defvar my-packages
   '(
     exec-path-from-shell
-    erlang elixir-mode alchemist rust-mode go-mode
-    ansible cargo
-    markdown-mode yaml-mode toml-mode json-mode
-    company company-erlang company-go company-ansible
-    flycheck flycheck-rust flycheck-rebar3 flycheck-mix flycheck-elixir flycheck-dialyzer
+    smooth-scrolling
+    expand-region
+    highlight
+    hlinum
+    git-gutter-fringe
     flyspell-lazy
-    racer
-    smooth-scrolling expand-region highlight hlinum git-gutter-fringe
-    helm helm-themes helm-projectile helm-flycheck
-    projectile perspective persp-mode persp-projectile
-    org undo-tree magit
-    flatland-theme flatland-black-theme monokai-theme
+    flycheck
+    company
+    projectile
+    perspective
+    persp-mode
+    persp-projectile
+    helm
+    helm-themes
+    helm-projectile
+    helm-flycheck
+    org
+    undo-tree
+    magit
+    monokai-theme
     nyan-mode
+    markdown-mode
+    yaml-mode
+    toml-mode
+    json-mode
+    erlang
+    company-erlang
+    flycheck-dialyzer
+    flycheck-rebar3
+    elixir-mode
+    alchemist
+    flycheck-elixir
+    flycheck-mix
+    rust-mode
+    cargo
+    flycheck-rust
+    racer
+    go-mode
+    company-go
+    ansible
+    company-ansible
    )
 )
 
