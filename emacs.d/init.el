@@ -1,4 +1,7 @@
 (require 'cl)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; Setup package repositories and install my defaualt packages.
 (when (>= emacs-major-version 24)
@@ -100,8 +103,6 @@
 (setq show-paren-delay 0)
 (show-paren-mode +1)
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
 (column-number-mode +1)
 (global-linum-mode +1)
 ;; (setq linum-format "%4d \u2502 ")
@@ -125,22 +126,32 @@
     (select-window
       (pcase direction
         (0 (split-window-right))
-        (1 (split-window-below)))))
+        (1 (split-window-below))))
+    (balance-windows))
 
 (defun delete-window-then-frame ()
   (interactive)
   (if (> (length (window-list)) 1)
-      (delete-window)
+      (progn (delete-window)
+             (balance-windows))
     (delete-frame)))
 
 (defun spiral-close ()
+<<<<<<< HEAD
   (interactive)
+=======
+  ;; (interactive)
+>>>>>>> 4df795159af917eb695d05ce8d2297106047e83f
   (if (> (length (window-list)) 1)
       (delete-window-then-frame)
     (kill-buffer (current-buffer))))
 
 (defun spiral-kill ()
+<<<<<<< HEAD
   (interactive)
+=======
+  ;; (interactive)
+>>>>>>> 4df795159af917eb695d05ce8d2297106047e83f
   (if (> (length (window-list)) 1)
       (kill-buffer (current-buffer))
     (delete-window-then-frame)))
@@ -306,7 +317,7 @@
     :weight 'bold)
 (set-face-attribute 'mode-line-position-face nil
     :inherit 'mode-line-face
-    :family "Menlo" :height 100)
+    :family "Menlo" :height 110)
 (set-face-attribute 'mode-line-mode-face nil
     :inherit 'mode-line-face
     :foreground "gray40")
@@ -336,9 +347,13 @@
      ("Sans Serif" "helv" "helvetica" "arial" "fixed")
      ("helv" "helvetica" "arial" "fixed"))))
  '(initial-scratch-message nil)
+<<<<<<< HEAD
  '(package-selected-packages
    (quote
     (yaml-mode undo-tree toml-mode smooth-scrolling rustfmt racer persp-projectile persp-mode nyan-mode monokai-theme markdown-mode magit json-mode hlinum highlight helm-themes helm-projectile helm-flycheck git-gutter-fringe flyspell-lazy flycheck-rust flycheck-rebar3 flycheck-mix flycheck-elixir flycheck-dialyzer flatland-theme flatland-black-theme expand-region exec-path-from-shell company-go company-erlang company-distel company-ansible cargo ansible alchemist)))
+=======
+ '(markdown-command "/usr/local/bin/markdown2")
+>>>>>>> 4df795159af917eb695d05ce8d2297106047e83f
  '(recentf-mode t)
  '(scroll-bar-mode nil))
 (custom-set-faces
@@ -346,7 +361,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 100 :width normal))))
+ '(default ((t (:family "Menlo" :foundry "bitstream" :slant normal :weight normal :height 120 :width normal))))
  '(mode-line-highlight ((t (:background "Orange" :foreground "white" :box (:line-width 4 :color "Orange"))))))
 
 (load-file "~/.emacs.d/my_bindings.el")
